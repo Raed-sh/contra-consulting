@@ -14,12 +14,12 @@ export const metadata = {
 
 function Form() {
   const inputClasses =
-    'block w-full px-4 py-4 leading-4 transition-colors duration-200 ease-in-out border-0 shadow-sm rounded-xl bg-slate-50 text-md text-slate-900 shadow-sky-100/50 ring-1 ring-inset ring-slate-200 placeholder:text-slate-400 hover:bg-white focus:border-0 focus:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600/60'
+    'block w-full px-4 py-4 leading-4 transition-colors duration-200 ease-in-out border-0 shadow-sm rounded-xl bg-slate-50 text-md text-[#00215E] shadow-sky-100/50 ring-1 ring-inset ring-slate-200 placeholder:text-slate-400 hover:bg-white focus:border-0 focus:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600/60'
 
   function Label({ name, description, children }) {
     return (
       <div className="flex justify-between text-md leading-6">
-        <label htmlFor={name} className="block font-medium text-slate-900">
+        <label htmlFor={name} className="block font-medium text-[#00215E]">
           {children}
         </label>
         {description && (
@@ -117,7 +117,7 @@ function Form() {
           placeholder="Tell me a little bit about your project..."
         />
         <fieldset>
-          <legend className="block text-md font-medium leading-6 text-slate-900">
+          <legend className="block text-md font-medium leading-6 text-[#00215E]">
             Expected services
           </legend>
           <div className="mt-4 space-y-3">
@@ -146,7 +146,7 @@ export default function ContactPage() {
             <div className="relative bg-slate-50 px-5 py-16 sm:px-6 sm:py-24 lg:col-span-6 lg:rounded-br-[64px] lg:px-8 lg:pt-32 2xl:pl-0">
               <div className="absolute inset-y-0 -left-full hidden w-full bg-slate-50 lg:block" />
               <div className="relative mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                <h2 className="font-display text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight lg:text-[40px] lg:leading-tight xl:text-5xl xl:leading-tight">
+                <h2 className="font-display text-4xl font-semibold leading-tight text-[#00215E] sm:text-5xl sm:leading-tight lg:text-[40px] lg:leading-tight xl:text-5xl xl:leading-tight">
                   How can I help you? Let’s get in touch
                   <span className="ml-4 sm:ml-6">👋</span>
                 </h2>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                       />
                     </svg>
                     <div className="sm:pt-0.5">
-                      <p className="font-display text-lg text-slate-900">
+                      <p className="font-display text-lg text-[#00215E]">
                         Email me
                       </p>
                       <p className="mt-1.5 text-base text-slate-600 sm:mt-2">
@@ -240,7 +240,7 @@ export default function ContactPage() {
                     </svg>
 
                     <div className="sm:pt-0.5">
-                      <p className="font-display text-lg text-slate-900">
+                      <p className="font-display text-lg text-[#00215E]">
                         Call me
                       </p>
                       <p className="mt-2 text-base text-slate-600">
@@ -260,7 +260,7 @@ export default function ContactPage() {
 
             <div className="px-5 py-16 sm:px-6 sm:py-24 lg:col-span-6 lg:pl-0 lg:pr-8 lg:pt-32 xl:col-span-5 xl:col-start-8 2xl:pr-0">
               <div className="mx-auto max-w-lg lg:mr-0">
-                <h3 className="font-display text-3xl font-semibold text-slate-900">
+                <h3 className="font-display text-3xl font-semibold text-[#00215E]">
                   Fill our the form below to get started
                 </h3>
                 <p className="mt-4 text-lg text-slate-600">

@@ -107,7 +107,7 @@ export function Header() {
                     <Link
                       key={`${link.label}-mobile`}
                       href={link.href}
-                      className="block text-base font-semibold text-slate-700 duration-200 hover:text-slate-900"
+                      className="block text-base font-semibold text-slate-700 duration-200 hover:text-[#00215E]"
                     >
                       {link.label}
                     </Link>
@@ -120,8 +120,8 @@ export function Header() {
                           className={clsx(
                             'group flex w-full items-center gap-2 text-base font-semibold duration-200 ease-in-out',
                             open
-                              ? 'text-slate-900'
-                              : 'text-slate-700 hover:text-slate-900'
+                              ? 'text-[#00215E]'
+                              : 'text-slate-700 hover:text-[#00215E]'
                           )}
                         >
                           <span>Pages</span>
@@ -132,8 +132,8 @@ export function Header() {
                             className={clsx(
                               'h-5 w-5 duration-300',
                               open
-                                ? 'rotate-90 text-slate-900'
-                                : 'text-slate-700 group-hover:text-slate-900'
+                                ? 'rotate-90 text-[#00215E]'
+                                : 'text-slate-700 group-hover:text-[#00215E]'
                             )}
                             aria-hidden="true"
                           >
@@ -153,7 +153,7 @@ export function Header() {
                             >
                               <Link
                                 href={subLink.href}
-                                className="block text-md font-medium text-slate-700 transition duration-200 ease-in-out hover:text-slate-900"
+                                className="block text-md font-medium text-slate-700 transition duration-200 ease-in-out hover:text-[#00215E]"
                               >
                                 {subLink.label}
                               </Link>
@@ -175,8 +175,16 @@ export function Header() {
   return (
     <header className="h-24 border-b border-slate-200/80 bg-white">
       <Container className="flex h-full w-full items-center">
-        <nav className="relative z-50 flex w-full items-center justify-between">
-          {/* <div className="flex shrink-0 items-center">
+        <nav className="relative z-50 flex w-full items-center justify-between ">
+          <Link href={'/'} className="relative h-24 w-52">
+            <Image
+              src={'/images/Logo.png'}
+              fill
+              alt="logo"
+              className="object-cover"
+            />
+          </Link>
+          {/* <div className="flex shrink-0 items-center ">
             <Link
               href="/"
               aria-label="Home"
@@ -202,8 +210,8 @@ export function Header() {
                 className={clsx(
                   'relative duration-200 after:absolute after:-bottom-2.5 after:left-1/2 after:h-0.5 after:w-4 after:-translate-x-1/2 after:rounded-full after:bg-slate-900 after:opacity-0 after:content-[""]',
                   pathname == link.href
-                    ? 'font-semibold text-slate-900 after:opacity-100'
-                    : 'font-medium text-slate-700 hover:text-slate-900 hover:after:opacity-25'
+                    ? 'font-semibold text-[#00215E] after:opacity-100'
+                    : 'font-medium text-slate-700 hover:text-[#00215E] hover:after:opacity-25'
                 )}
               >
                 {link.label}
@@ -217,8 +225,8 @@ export function Header() {
                     className={clsx(
                       'group flex items-center font-medium outline-none duration-200 ease-in-out focus:outline-none',
                       open
-                        ? 'text-slate-900'
-                        : 'text-slate-700  hover:text-slate-900'
+                        ? 'text-[#00215E]'
+                        : 'text-slate-700  hover:text-[#00215E]'
                     )}
                   >
                     <span>Pages</span>
@@ -230,7 +238,7 @@ export function Header() {
                       className={clsx(
                         'ml-2 h-5 w-5 duration-300',
                         open
-                          ? 'rotate-180 text-slate-900'
+                          ? 'rotate-180 text-[#00215E]'
                           : 'text-slate-600 group-hover:text-slate-800'
                       )}
                     >
@@ -250,8 +258,8 @@ export function Header() {
                           className={clsx(
                             'block px-5 py-3.5 font-medium',
                             pathname == subLink.href
-                              ? 'bg-slate-100/60 text-slate-900'
-                              : 'rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-slate-900'
+                              ? 'bg-slate-100/60 text-[#00215E]'
+                              : 'rounded-md text-slate-700 transition duration-300 ease-in-out hover:bg-slate-50 hover:text-[#00215E]'
                           )}
                         >
                           {subLink.label}
@@ -263,8 +271,8 @@ export function Header() {
               )}
             </Menu>
           </div> */}
-          <div className="flex items-center justify-end w-full">
-            <Button variant="secondary" href="#">
+          <div className="flex w-full items-center justify-end">
+            <Button variant="secondary" href="/contact">
               Book a call
             </Button>
             <div className="ml-4 md:hidden">

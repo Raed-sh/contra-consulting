@@ -212,7 +212,7 @@ export function Press() {
     <section className="py-16 overflow-hidden bg-white sm:py-24 lg:pt-32">
       <Container>
         <div className="text-center">
-          <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
+          <h2 className="text-4xl font-semibold font-display text-[#00215E] sm:text-5xl">
             Press and Interviews
           </h2>
           <p className="max-w-md mx-auto mt-6 text-lg leading-8 text-slate-700">
@@ -230,7 +230,7 @@ export function Press() {
                   <item.icon className="w-4 h-4 text-slate-500" />
                   {item.category}
                 </div>
-                <h3 className="mt-6 text-lg font-medium font-display text-slate-900 lg:text-xl">
+                <h3 className="mt-6 text-lg font-medium font-display text-[#00215E] lg:text-xl">
                   {item.title}
                 </h3>
                 <div className="space-y-1 mt-9">

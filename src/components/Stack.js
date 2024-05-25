@@ -57,7 +57,7 @@ export function Stack() {
         <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2">
           <div className="lg:order-2">
             <div className="max-w-2xl mx-auto lg:mx-0">
-              <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
+              <h2 className="text-4xl font-semibold font-display text-[#00215E] sm:text-5xl">
                 A simple stack that you can{' '}
                 <span className="relative whitespace-nowrap">
                   <svg
@@ -112,7 +112,7 @@ export function Stack() {
                         />
                       </div>
                       <div className="overflow-hidden">
-                        <p className="text-base font-semibold font-display text-slate-900 sm:text-lg">
+                        <p className="text-base font-semibold font-display text-[#00215E] sm:text-lg">
                           {tech.name}
                         </p>
                         <p className="mt-1 truncate text-md text-slate-600 sm:text-base">

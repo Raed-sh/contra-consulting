@@ -44,7 +44,7 @@ function CaseStudy({ caseStudy }) {
           />
           {caseStudy.tags[0]}
         </div>
-        <h3 className="mt-5 font-display text-2xl font-medium text-slate-900 sm:mt-6 sm:text-3xl">
+        <h3 className="mt-5 font-display text-2xl font-medium text-[#00215E] sm:mt-6 sm:text-3xl">
           {caseStudy.title}
         </h3>
         <p className="mt-3 text-md leading-8 text-slate-700 sm:mt-4 sm:text-base sm:leading-8">
@@ -94,7 +94,7 @@ export function FeaturedWork() {
     <section className="overflow-x-clip bg-white pb-16 pt-8 sm:pb-24 sm:pt-12 md:pt-16">
       <Container>
         <div className="text-center">
-          <h2 className="font-display text-4xl font-semibold text-slate-900 sm:text-5xl">
+          <h2 className="font-display text-4xl font-semibold text-[#00215E] sm:text-5xl">
             Check out my latest work
           </h2>
           <p className="mx-auto mt-4 max-w-md text-lg leading-8 text-slate-700 sm:mt-5">

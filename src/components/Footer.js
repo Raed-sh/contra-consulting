@@ -26,31 +26,17 @@ const socialLinks = [
   {
     label: 'Email me',
     icon: EmailIcon,
-    href: '#',
-  },
-  {
-    label: 'Dribbble',
-    icon: DribbbleIcon,
-    href: '#',
+    href: '/contact',
   },
   {
     label: 'Instagram',
     icon: InstagramIcon,
     href: '#',
   },
-  {
-    label: 'Twitter',
-    icon: TwitterIcon,
-    href: '#',
-  },
+
   {
     label: 'LinkedIn',
     icon: LinkedInIcon,
-    href: '#',
-  },
-  {
-    label: 'Github',
-    icon: GitHubIcon,
     href: '#',
   },
 ]
@@ -70,50 +56,6 @@ function SocialLink({ icon: Icon, label, ...props }) {
 export function Footer({ newsletter = true }) {
   return (
     <section className={clsx(newsletter && 'pt-12 sm:pt-16')}>
-      {newsletter && (
-        <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-900"></div>
-          <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <div className="relative overflow-hidden rounded-2xl bg-sky-700 px-5 py-12 sm:px-16 lg:py-14">
-              <Image
-                src={newsletterBg}
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover object-right"
-              />
-              <div className="relative flex w-full flex-col items-center lg:flex-row">
-                <div className="max-w-2xl text-center lg:pr-4 lg:text-left">
-                  <h3 className="font-display text-4xl font-semibold text-white sm:text-5xl">
-                    Subscribe to my newsletter
-                  </h3>
-                  <p className="mx-auto mt-4 max-w-lg text-lg text-sky-50 lg:mx-0 lg:mt-6">
-                    Join 10,000+ designers and get creative site breakdowns,
-                    design musings and tips every Monday.
-                  </p>
-                </div>
-                <form
-                  action="#"
-                  method="post"
-                  className="relative mt-10 w-full max-w-lg lg:mt-0"
-                >
-                  <input
-                    type="email"
-                    className="h-14 w-full rounded-full border-0 bg-white/10 py-3.5 pl-5 pr-32 text-sm leading-5 text-sky-50 placeholder-sky-100/90 outline-none ring-1 ring-white/25 backdrop-blur  duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-white/30 sm:pl-6"
-                    required
-                    placeholder="Enter your email"
-                    autoComplete="email"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-1.5 top-1.5 inline-flex h-11 items-center rounded-full bg-sky-900 px-5 py-3 text-sm font-semibold text-sky-50 outline-none transition duration-200 ease-in-out hover:bg-sky-800 focus:outline-none sm:px-7 sm:text-md"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
       <footer className="overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32">
         <Container>
           <div className="mx-auto grid max-w-xl items-center gap-5 lg:mx-0 lg:max-w-none lg:grid-cols-12 lg:gap-12 xl:gap-20">
@@ -122,7 +64,11 @@ export function Footer({ newsletter = true }) {
                 Lets make something great together
               </h3>
               <div className="hidden lg:block">
-                <Button href="#" variant="primaryOnDark" className="mt-12">
+                <Button
+                  href="/contact"
+                  variant="primaryOnDark"
+                  className="mt-12"
+                >
                   Book a call
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +92,7 @@ export function Footer({ newsletter = true }) {
               </p>
 
               <Button
-                href="#"
+                href="/contact"
                 variant="primaryOnDark"
                 className="mt-10 lg:hidden"
               >

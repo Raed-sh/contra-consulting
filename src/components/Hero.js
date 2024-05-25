@@ -13,23 +13,27 @@ import sketch from '@/images/logos/icons/sketch.png'
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link
-      className="flex items-center justify-center duration-200 border rounded-full h-11 w-11 border-slate-200 hover:bg-slate-50"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 duration-200 hover:bg-slate-50"
       {...props}
     >
-      <Icon className="w-4 h-4 transition fill-slate-600 group-hover:fill-slate-700" />
+      <Icon className="h-4 w-4 fill-slate-600 transition group-hover:fill-slate-700" />
     </Link>
   )
 }
 
 export function Hero() {
   return (
-    <section className="relative py-20 overflow-hidden lg:py-24">
+    <section className="relative overflow-hidden py-20 lg:py-24">
       {/* Light blue gradient background */}
-      <Image src={heroBG} alt="" className="absolute inset-x-0 w-auto top-56 lg:inset-y-0" />
+      <Image
+        src={heroBG}
+        alt=""
+        className="absolute inset-x-0 top-56 w-auto lg:inset-y-0"
+      />
 
       <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
-        <div className="flex flex-col items-center max-w-2xl mx-auto lg:items-start">
-          <h1 className="text-5xl font-semibold text-center font-display text-slate-900 sm:text-6xl lg:text-left">
+        <div className="mx-auto flex max-w-2xl flex-col items-center lg:items-start">
+          <h1 className="text-center font-display text-5xl font-semibold  text-[#00215E] sm:text-6xl lg:text-left">
             <span className="relative whitespace-nowrap">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -43,17 +47,16 @@ export function Hero() {
               </svg>
               <span className="relative">Helping</span>
             </span>{' '}
-            businesses turn their ideas into reality
+            businesses to improvement
           </h1>
-          <p className="mt-6 text-lg leading-8 text-center text-slate-700 lg:text-left">
-            I'm a passionate developer, entrepreneur, and general technology
-            enthusiast living in San Francisco. I've worked with hundreds of
-            startups to help them develop their ideas into profitable
-            businesses.
+          <p className="mt-6 text-center text-lg leading-8 text-slate-700 lg:text-left">
+            CONTRA is a one-place human resources business solution. We are
+            passionate about enhancing the way businesses approach human
+            resources in a world of competing people management trends.
           </p>
-          <div className="flex flex-wrap items-center justify-center mt-10 gap-x-10 gap-y-6 lg:justify-start">
-            <Button href="#" className="h-11">
-              Book a call with me
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:justify-start">
+            <Button href="/contact" className="h-11">
+              Book a call with us
             </Button>
 
             <div className="flex gap-3 sm:gap-4">
@@ -76,10 +79,10 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div className="w-full max-w-lg mx-auto lg:mr-0">
-          <div className="relative aspect-h-5 aspect-w-4 rounded-2xl bg-slate-50">
+        <div className="mx-auto w-full max-w-lg lg:mr-0">
+          <div className="aspect-h-5 aspect-w-4 relative rounded-2xl bg-slate-50">
             <Image
-              className="object-cover object-center w-full h-full rounded-2xl"
+              className="h-full w-full rounded-2xl object-cover object-center"
               src={heroPortrait}
               alt=""
               sizes="(min-width: 552px) 32rem, calc(100vw - 2.5rem)"
@@ -110,11 +113,11 @@ export function Hero() {
                 </svg>
               </div>
               <div className="absolute -top-6 right-12 inline-flex h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 lg:-top-6 lg:left-44 lg:px-10 2xl:-left-48 2xl:top-14">
-                <Image src={figma} alt="" className="w-4 h-auto" priority />4
+                <Image src={figma} alt="" className="h-auto w-4" priority />4
                 years of experience
               </div>
               <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-white/90 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24 lg:px-10 xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
-                <Image src={sketch} alt="" className="w-auto h-6" priority />5
+                <Image src={sketch} alt="" className="h-6 w-auto" priority />5
                 years of experience
               </div>
               <div className="absolute top-[350px] hidden h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-white/90 px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-full md:inline-flex md:-translate-x-32 lg:left-48 lg:hidden lg:px-10 2xl:left-full 2xl:inline-flex 2xl:-translate-x-28">

@@ -5,11 +5,11 @@ import image from '@/images/experience-image.jpg'
 
 export function Experience() {
   return (
-    <section className="relative pt-20 pb-40 overflow-hidden bg-gradient-to-b from-slate-50 via-slate-50 to-white sm:pt-24 lg:pb-64 lg:pt-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-slate-50 to-white pb-40 pt-20 sm:pt-24 lg:pb-64 lg:pt-32">
       <Container>
-        <div className="grid items-center max-w-xl gap-6 mx-auto lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid max-w-xl items-center gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
+            <h2 className="font-display text-4xl font-semibold text-[#00215E] sm:text-5xl">
               I'm your{' '}
               <span className="relative whitespace-nowrap">
                 <svg
@@ -30,31 +30,32 @@ export function Experience() {
           </div>
           <div>
             <p className="text-lg leading-8 text-slate-700">
-              Experience the advantage of an all-inclusive project solution,
-              where excellence, speed, and responsiveness converge to ensure the
-              highest quality outcome.
+              A team of seasoned HR professionals, we bring together a wealth of
+              knowledge and experience to deliver innovative HR solutions
+              tailored to the needs of startups and small businesses in Jordan
+              and expands to the MENA region
             </p>
           </div>
         </div>
-        <div className="grid max-w-xl mx-auto mt-16 gap-14 lg:mx-0 lg:mt-24 lg:max-w-none lg:grid-cols-12 lg:gap-7">
+        <div className="mx-auto mt-16 grid max-w-xl gap-14 lg:mx-0 lg:mt-24 lg:max-w-none lg:grid-cols-12 lg:gap-7">
           <div className="max-w-lg lg:col-span-4">
             <ul className="relative">
               <li>
                 <div className="relative pb-24 lg:pb-20">
                   <span
-                    className="absolute -ml-px border border-dashed bottom-4 left-10 top-24 border-slate-300"
+                    className="absolute bottom-4 left-10 top-24 -ml-px border border-dashed border-slate-300"
                     aria-hidden="true"
                   ></span>
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg bg-slate-900">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-900 shadow-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
                           fill="none"
-                          className="w-6 h-6 text-sky-50"
+                          className="h-6 w-6 text-sky-50"
                         >
                           <g clipPath="url(#clip0_112_3)">
                             <path
@@ -81,7 +82,7 @@ export function Experience() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium font-display text-slate-900 ">
+                      <h3 className="font-display text-xl font-medium text-[#00215E] ">
                         Excellence
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
@@ -95,19 +96,19 @@ export function Experience() {
               <li>
                 <div className="relative pb-24 lg:pb-20">
                   <span
-                    className="absolute -ml-px border border-dashed bottom-4 left-10 top-24 border-slate-300"
+                    className="absolute bottom-4 left-10 top-24 -ml-px border border-dashed border-slate-300"
                     aria-hidden="true"
                   ></span>
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg bg-slate-900">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-900 shadow-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
                           fill="none"
-                          className="w-6 h-6 text-sky-50"
+                          className="h-6 w-6 text-sky-50"
                         >
                           <g clipPath="url(#clip0_112_53)">
                             <path
@@ -152,7 +153,7 @@ export function Experience() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium font-display text-slate-900 ">
+                      <h3 className="font-display text-xl font-medium text-[#00215E] ">
                         Speed
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
@@ -167,14 +168,14 @@ export function Experience() {
                 <div className="relative">
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex items-center justify-center w-20 h-20 rounded-full shadow-lg bg-slate-900">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-900 shadow-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
                           fill="none"
-                          className="w-6 h-6 text-sky-50"
+                          className="h-6 w-6 text-sky-50"
                         >
                           <g clipPath="url(#clip0_112_46)">
                             <path
@@ -222,7 +223,7 @@ export function Experience() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium font-display text-slate-900 ">
+                      <h3 className="font-display text-xl font-medium text-[#00215E] ">
                         Responsiveness
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
@@ -233,14 +234,14 @@ export function Experience() {
                   </div>
                 </div>
               </li>
-              <div className="absolute hidden gap-6 -bottom-36 -right-8 lg:flex">
+              <div className="absolute -bottom-36 -right-8 hidden gap-6 lg:flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="81"
                   height="83"
                   viewBox="0 0 81 83"
                   fill="none"
-                  className="relative w-20 h-auto -top-2 text-slate-600"
+                  className="relative -top-2 h-auto w-20 text-slate-600"
                 >
                   <g clipPath="url(#clip0_112_68)">
                     <path
@@ -268,23 +269,23 @@ export function Experience() {
             </ul>
           </div>
           <div className="lg:col-span-8 lg:pl-8 xl:pl-24">
-            <div className="relative w-full aspect-h-2 aspect-w-3">
+            <div className="aspect-h-2 aspect-w-3 relative w-full">
               <Image
-                className="object-cover object-center w-full h-full rounded-3xl"
+                className="h-full w-full rounded-3xl object-cover object-center"
                 src={image}
                 alt=""
                 fill
                 sizes="(min-width: 1280px) 45rem, (min-width: 1024px) calc(66.67vw - 4rem), (min-width: 640px) 36rem, calc(100vw - 2.5rem)"
               />
               <div>
-                <div className="absolute w-32 h-32 -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 bg-white/50 backdrop-blur-sm lg:h-44 lg:w-44">
+                <div className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/50 backdrop-blur-sm lg:h-44 lg:w-44">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="145"
                     height="145"
                     viewBox="0 0 145 145"
                     fill="none"
-                    className="absolute w-24 h-24 inset-4 animate-spin-slow text-slate-900/90 lg:h-36 lg:w-36"
+                    className="absolute inset-4 h-24 w-24 animate-spin-slow text-[#00215E]/90 lg:h-36 lg:w-36"
                   >
                     <path
                       d="M56.5817 14.6547L56.1606 12.8143L60.98 11.7114L61.4011 13.5518L56.5817 14.6547Z"
@@ -376,7 +377,7 @@ export function Experience() {
                     />
                   </svg>
                   <button
-                    className="relative inline-flex items-center justify-center w-12 h-12 duration-200 -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 bg-slate-900 hover:bg-slate-800 lg:h-20 lg:w-20"
+                    className="relative left-1/2 top-1/2 inline-flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-slate-900 duration-200 hover:bg-slate-800 lg:h-20 lg:w-20"
                     aria-label="Download resume"
                   >
                     <svg
@@ -384,7 +385,7 @@ export function Experience() {
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
-                      className="w-5 h-5 text-white lg:h-7 lg:w-7"
+                      className="h-5 w-5 text-white lg:h-7 lg:w-7"
                     >
                       <g
                         strokeLinecap="round"
@@ -409,7 +410,7 @@ export function Experience() {
                     </svg>
                   </button>
                 </div>
-                <dl className="absolute bottom-0 grid grid-cols-2 gap-5 px-6 py-8 text-center translate-x-1/2 right-1/2 w-max translate-y-3/4 rounded-2xl bg-sky-700/90 backdrop-blur-sm sm:translate-y-1/2 sm:gap-12 sm:p-10 lg:right-20 lg:translate-x-0">
+                <dl className="absolute bottom-0 right-1/2 grid w-max translate-x-1/2 translate-y-3/4 grid-cols-2 gap-5 rounded-2xl bg-sky-700/90 px-6 py-8 text-center backdrop-blur-sm sm:translate-y-1/2 sm:gap-12 sm:p-10 lg:right-20 lg:translate-x-0">
                   <div className="flex flex-col gap-1">
                     <dt className="text-sm font-semibold leading-6 text-sky-50">
                       Years of experience
@@ -433,7 +434,7 @@ export function Experience() {
                   width="82"
                   height="84"
                   viewBox="0 0 82 84"
-                  className="absolute w-20 h-auto -right-8 -top-8 text-slate-700"
+                  className="absolute -right-8 -top-8 h-auto w-20 text-slate-700"
                 >
                   <g clipPath="url(#clip0_102_2463)">
                     <path

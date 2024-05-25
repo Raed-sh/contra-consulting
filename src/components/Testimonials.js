@@ -159,7 +159,7 @@ export function Testimonials() {
       <Container className="relative">
         <div className="grid max-w-xl gap-6 mx-auto lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="text-4xl font-semibold font-display text-slate-900 sm:text-5xl">
+            <h2 className="text-4xl font-semibold font-display text-[#00215E] sm:text-5xl">
               Here’s what past clients are saying about me
             </h2>
             <div className="mt-10 hidden h-[7px] w-full rounded-full bg-slate-200 lg:mt-16 lg:block">
@@ -253,7 +253,7 @@ export function Testimonials() {
                           </svg>
                         ))}
                       </div>
-                      <p className="text-xl font-medium mt-7 font-display text-slate-900">
+                      <p className="text-xl font-medium mt-7 font-display text-[#00215E]">
                         {testimonial.headline}
                       </p>
                       <p className="mt-3 text-sm leading-7 text-slate-700">
@@ -264,7 +264,7 @@ export function Testimonials() {
                       <hr className="w-full h-px my-6 bg-slate-200" />
                       <div className="flex items-center justify-between">
                         <div className="">
-                          <p className="font-medium font-display text-md text-slate-900">
+                          <p className="font-medium font-display text-md text-[#00215E]">
                             {testimonial.author.name}
                           </p>
                           <p className="mt-1.5 text-sm text-slate-600">
