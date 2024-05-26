@@ -9,8 +9,6 @@ import { Menu, Popover, Transition, Disclosure } from '@headlessui/react'
 
 import { Button } from './Button'
 import { Container } from './Container'
-import logo from '@/images/logo.png'
-import logoIcon from '@/images/logo-icon.png'
 
 const links = [
   { label: 'Home', href: '/' },
