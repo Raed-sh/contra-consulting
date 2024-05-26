@@ -3,6 +3,8 @@ const { withContentlayer } = require('next-contentlayer')
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  output: 'export',
+  distDir: '_static',
   reactStrictMode: true,
   images: {
     deviceSizes: [
