@@ -20,13 +20,17 @@ const gochiHand = Gochi_Hand({
   weight: '400',
 })
 
+
+
 export const metadata = {
+  metadataBase: new URL('https://contrahr.com'),
   title: {
     template: '%s - Contra Consulting',
     default:
       'Contra Consulting',
   },
   description:"HR and consulting compnay in MENA region",
+  
 }
 
 export default function RootLayout({ children }) {
