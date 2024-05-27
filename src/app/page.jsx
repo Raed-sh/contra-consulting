@@ -4,7 +4,7 @@ import  Services  from '@/components/services'
 import { Footer } from '@/components/Footer'
 
 export const metadata = {
-  title:"HR and Consultation Company | Contra",
+  title:"Contra | HR and Consultation Company",
   description:
     "We provide top-notch HR and consultation services to help your business thrive.",
 }
