@@ -1,6 +1,6 @@
 import { Hero } from '@/components/Hero'
 import { Experience } from '@/components/Experience'
-import { FeaturedWork } from '@/components/work/FeaturedWork'
+import  Services  from '@/components/services'
 import { Footer } from '@/components/Footer'
 
 export const metadata = {
@@ -14,7 +14,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Experience />
-      <FeaturedWork />
+      <Services />
       <Footer newsletter={false}/>
     </>
   )

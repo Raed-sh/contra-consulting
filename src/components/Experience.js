@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { Container } from './Container'
-import image from '@/images/experience-image.jpg'
+import image from '@/images/experience-image1.jpg'
 
 export function Experience() {
   return (
@@ -10,7 +10,7 @@ export function Experience() {
         <div className="mx-auto grid max-w-xl items-center gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-display text-4xl font-semibold text-[#00215E] sm:text-5xl">
-              I'm your{' '}
+              We&apos;re your{' '}
               <span className="relative whitespace-nowrap">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -25,15 +25,14 @@ export function Experience() {
 
                 <span className="relative text-sky-700">all-in-one</span>
               </span>{' '}
-              project solution
+              project solution!
             </h2>
           </div>
           <div>
             <p className="text-lg leading-8 text-slate-700">
-              A team of seasoned HR professionals, we bring together a wealth of
-              knowledge and experience to deliver innovative HR solutions
-              tailored to the needs of startups and small businesses in Jordan
-              and expands to the MENA region
+              As a team of seasoned HR professionals, we bring together a wealth
+              of knowledge and experience to deliver innovative HR solutions,
+              tailored to the needs of startups and small businesses.
             </p>
           </div>
         </div>
@@ -86,7 +85,7 @@ export function Experience() {
                         Excellence
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
-                        I take pride in doing things well. All client work is
+                        We take pride in doing things well. All client work is
                         done with the best quality possible.
                       </p>
                     </div>
@@ -157,8 +156,8 @@ export function Experience() {
                         Speed
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
-                        I like to work hard and fast. I know how important
-                        deadlines are to my clients.
+                        We like to work hard and fast. Aware how important
+                        deadlines are to our clients
                       </p>
                     </div>
                   </div>
@@ -227,7 +226,7 @@ export function Experience() {
                         Responsiveness
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
-                        You can rely on me to be responsive and clear whenever
+                        You can rely on us to be responsive and clear whenever
                         we work together.
                       </p>
                     </div>
@@ -263,7 +262,7 @@ export function Experience() {
                   </defs>
                 </svg>
                 <span className="inline-block max-w-[220px] -rotate-12 transform font-writing text-2xl tracking-wide text-slate-600">
-                  What differentiates me from others
+                  What differentiates us from others
                 </span>
               </div>
             </ul>

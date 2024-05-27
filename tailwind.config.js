@@ -32,6 +32,11 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 12s linear infinite',
       },
+      colors: {
+        primary: '#00215E',
+        secondary: '#FFC55A',
+        accent: '#2C4E80',
+      },
     },
   },
   plugins: [
