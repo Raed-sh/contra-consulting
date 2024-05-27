@@ -269,13 +269,20 @@ export function Header() {
               )}
             </Menu>
           </div> */}
-          <div className="flex w-full items-center justify-end">
-            <Button variant="secondary" href="/contact">
+          <div className="flex w-full items-center justify-end gap-4">
+            <Button
+              className={'bg-accent'}
+              onClick={() => console.log('dlskjadkls')}
+            >
+              Apply for Career
+            </Button>
+            <Button variant="primaryOnDark" href="/contact">
               Book a call
             </Button>
-            <div className="ml-4 md:hidden">
+
+            {/* <div className="ml-4 md:hidden">
               <MobileNav />
-            </div>
+            </div> */}
           </div>
         </nav>
       </Container>

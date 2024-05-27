@@ -47,7 +47,7 @@ export function Experience() {
                   ></span>
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-900 shadow-lg">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-primary shadow-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -100,7 +100,7 @@ export function Experience() {
                   ></span>
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-900 shadow-lg">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-secondary shadow-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -167,7 +167,7 @@ export function Experience() {
                 <div className="relative">
                   <div className="relative flex space-x-7">
                     <div>
-                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-slate-900 shadow-lg">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-accent shadow-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"

@@ -135,7 +135,7 @@ export function Footer({ newsletter = true }) {
                 </Link>
               ))}
             </div> */}
-            <p className="mt-8 text-base text-slate-400/90 md:mt-0">
+            <p className="mt-8 text-base text-secondary md:mt-0">
               © {new Date().getFullYear()} Contra Consulting. All rights
               reserved.
             </p>

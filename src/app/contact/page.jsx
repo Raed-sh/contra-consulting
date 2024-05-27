@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Button } from '@/components/Button'
 import { Footer } from '@/components/Footer'
 
 import image from '@/images/contact.jpg'
+import ContactForm from '../../components/ContactForm'
 
 export const metadata = {
   title: 'Contact us',
@@ -12,130 +12,7 @@ export const metadata = {
     "Whether you're looking to kickstart a new project or simply want to say hi, feel free to get in touch.",
 }
 
-function Form() {
-  const inputClasses =
-    'block w-full px-4 py-4 leading-4 transition-colors duration-200 ease-in-out border-0 shadow-sm rounded-xl bg-slate-50 text-md text-[#00215E] shadow-sky-100/50 ring-1 ring-inset ring-slate-200 placeholder:text-slate-400 hover:bg-white focus:border-0 focus:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-600/60'
 
-  function Label({ name, description, children }) {
-    return (
-      <div className="flex justify-between text-md leading-6">
-        <label htmlFor={name} className="block font-medium text-[#00215E]">
-          {children}
-        </label>
-        {description && (
-          <p id={`${name}-description`} className="text-slate-500/80">
-            {description}
-          </p>
-        )}
-      </div>
-    )
-  }
-
-  function TextField({
-    label,
-    name,
-    type = 'text',
-    rows = 5,
-    className,
-    ...props
-  }) {
-    return (
-      <div className={className}>
-        {label && <Label name={name}>{label}</Label>}
-        <div className="mt-2">
-          {type === 'textarea' ? (
-            <textarea
-              id={name}
-              name={name}
-              rows={rows}
-              {...props}
-              className={inputClasses}
-            />
-          ) : (
-            <input
-              id={name}
-              name={name}
-              type={type}
-              {...props}
-              className={inputClasses}
-            />
-          )}
-        </div>
-      </div>
-    )
-  }
-
-  function CheckboxField({ label, name }) {
-    return (
-      <div className="flex items-start">
-        <div className="flex h-6 items-center">
-          <input
-            id={name}
-            name={name}
-            type="checkbox"
-            className="h-4 w-4 rounded border-slate-300/80 bg-slate-50 text-sky-600 shadow-sm shadow-sky-100/50 focus:outline-none focus:ring-transparent"
-          />
-        </div>
-        <div className="ml-3 text-sm leading-6">
-          <label htmlFor={name} className="text-slate-700">
-            {label}
-          </label>
-        </div>
-      </div>
-    )
-  }
-
-  return (
-    <form action="#" method="POST" className="mt-10">
-      <div className="space-y-7">
-        <TextField
-          label="Name"
-          name="name"
-          autoComplete="name"
-          placeholder="Jane Doe"
-        />
-        <TextField
-          label="Email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          placeholder="foobar@email.com"
-        />
-        <TextField
-          label="Phone"
-          name="phone"
-          type="tel"
-          autoComplete="tel"
-          aria-describedby="phone-description"
-          placeholder="+1 (800) 123-4567"
-        />
-        <TextField
-          label="Message"
-          name="message"
-          type="textarea"
-          aria-describedby="message-description"
-          placeholder="Tell me a little bit about your project..."
-        />
-        <fieldset>
-          <legend className="block text-md font-medium leading-6 text-[#00215E]">
-            Expected services
-          </legend>
-          <div className="mt-4 space-y-3">
-            <CheckboxField label="Web development" name="web-development" />
-            <CheckboxField label="Web design" name="web-design" />
-            <CheckboxField label="Consulting" name="consulting" />
-            <CheckboxField label="Other" name="other" />
-          </div>
-        </fieldset>
-      </div>
-      <div className="mt-10 border-t border-slate-200 pt-8">
-        <Button type="submit" className="w-full !text-base sm:!text-lg">
-          Get started
-        </Button>
-      </div>
-    </form>
-  )
-}
 
 export default function ContactPage() {
   return (
@@ -147,8 +24,7 @@ export default function ContactPage() {
               <div className="absolute inset-y-0 -left-full hidden w-full bg-slate-50 lg:block" />
               <div className="relative mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                 <h2 className="font-display text-4xl font-semibold leading-tight text-[#00215E] sm:text-5xl sm:leading-tight lg:text-[40px] lg:leading-tight xl:text-5xl xl:leading-tight">
-                  How can I help you? Let’s get in touch
-                  <span className="ml-4 sm:ml-6">👋</span>
+                  How can I help you? Let’s get in touch<span className="ml-4 sm:ml-6">👋</span>
                 </h2>
 
                 <div className="aspect-h-2 aspect-w-3 mt-12 sm:mt-16">
@@ -161,7 +37,7 @@ export default function ContactPage() {
                 </div>
                 <div className="relative mt-14 h-fit w-fit font-writing text-2xl tracking-wide text-slate-600 sm:mt-20 sm:text-[27px]">
                   <span className="inline-block w-52 max-w-[220px] transform sm:w-auto sm:-rotate-6">
-                    You can <span className="text-sky-700">reach me</span> at
+                    You can <span className="text-sky-700">reach us</span> at
                     the following
                   </span>
                   <svg
@@ -209,17 +85,17 @@ export default function ContactPage() {
                       />
                     </svg>
                     <div className="sm:pt-0.5">
-                      <p className="font-display text-lg text-[#00215E]">
-                        Email me
+                      <p className="font-display text-lg text-primary">
+                        Email us
                       </p>
                       <p className="mt-1.5 text-base text-slate-600 sm:mt-2">
-                        I will usually email you back within an hour
+                        We will usually email you back within an hour
                       </p>
                       <Link
                         href="mailto:hey@janedoe.com"
                         className="mt-5 inline-block text-sky-700 duration-200 ease-in-out hover:text-sky-600 sm:mt-6"
                       >
-                        hey@janedoe.com
+                        info@contrahr.com
                       </Link>
                     </div>
                   </div>
@@ -241,10 +117,10 @@ export default function ContactPage() {
 
                     <div className="sm:pt-0.5">
                       <p className="font-display text-lg text-[#00215E]">
-                        Call me
+                        Call us
                       </p>
                       <p className="mt-2 text-base text-slate-600">
-                        I’m available weekdays from 9AM to 5PM
+                        We&apos;re available weekdays from 9AM to 5PM
                       </p>
                       <Link
                         href="tel:+13234567891"
@@ -261,13 +137,9 @@ export default function ContactPage() {
             <div className="px-5 py-16 sm:px-6 sm:py-24 lg:col-span-6 lg:pl-0 lg:pr-8 lg:pt-32 xl:col-span-5 xl:col-start-8 2xl:pr-0">
               <div className="mx-auto max-w-lg lg:mr-0">
                 <h3 className="font-display text-3xl font-semibold text-[#00215E]">
-                  Fill our the form below to get started
+                  Fill out the form below to get started
                 </h3>
-                <p className="mt-4 text-lg text-slate-600">
-                  Turkish cortado mazagran skinny macchiato espresso trade
-                  medium aromatic.
-                </p>
-                <Form />
+                <ContactForm />
               </div>
             </div>
           </div>

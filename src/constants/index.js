@@ -32,7 +32,7 @@ export const services = [
       },
     ],
     url: '',
-    thumbnail: '/images/services/service1.jpg',
+    thumbnail: '/images/services/service-1.png',
   },
   {
     title: 'Talent Acquisition and Recruitment',
@@ -56,7 +56,7 @@ export const services = [
       },
     ],
     url: '',
-    thumbnail: '/images/services/service2.jpg',
+    thumbnail: '/images/services/service-2.png',
   },
   {
     title: 'Compliance and Employee Relations',
@@ -81,7 +81,7 @@ export const services = [
       },
     ],
     url: '',
-    thumbnail: '/images/services/service3.jpg',
+    thumbnail: '/images/services/service-3.png',
   },
   {
     title: 'Talent Management',
@@ -110,7 +110,7 @@ export const services = [
       },
     ],
     url: '',
-    thumbnail: '/images/services/service4.jpg',
+    thumbnail: '/images/services/service-4.png',
   },
   {
     title: 'HR Outsourcing and Managed Services',
@@ -134,6 +134,6 @@ export const services = [
       },
     ],
     url: '',
-    thumbnail: '/images/services/service5.jpg',
+    thumbnail: '/images/services/service-5.png',
   },
 ]
