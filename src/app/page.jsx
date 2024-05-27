@@ -4,9 +4,9 @@ import  Services  from '@/components/services'
 import { Footer } from '@/components/Footer'
 
 export const metadata = {
-  title:"Contra Consulting",
+  title:"HR and Consultation Company | Contra",
   description:
-    "I'm a passionate developer, entrepreneur, and general technology enthusiast living in San Francisco. I've worked with hundreds of startups to help them develop their ideas into profitable businesses.",
+    "We provide top-notch HR and consultation services to help your business thrive.",
 }
 
 export default function HomePage() {

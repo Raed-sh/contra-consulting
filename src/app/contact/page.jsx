@@ -7,9 +7,9 @@ import { Footer } from '@/components/Footer'
 import image from '@/images/contact.jpg'
 
 export const metadata = {
-  title: 'Contact me',
+  title: 'Contact us',
   description:
-    "Whether you're looking to kickstart a new web project or simply want to say hi, feel free to get in touch.",
+    "Whether you're looking to kickstart a new project or simply want to say hi, feel free to get in touch.",
 }
 
 function Form() {
