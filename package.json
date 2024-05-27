@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
-    "@headlessui/react": "^1.7.17",
+    "@headlessui/react": "^1.7.19",
     "@mapbox/rehype-prism": "^0.8.0",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "clsx": "^2.0.0",
     "contentlayer": "^0.3.4",
