@@ -26,7 +26,7 @@ export const metadata = {
     default:
       'Contra Consulting',
   },
-  description:"HR and consulting compnay in MENA region"
+  description:"HR and consulting compnay in MENA region",
 }
 
 export default function RootLayout({ children }) {
