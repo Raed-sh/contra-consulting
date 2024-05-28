@@ -1,5 +1,5 @@
 import { Container } from '@/components/Container'
-import ServiceComponent from './service'
+import ServiceCard from './ServiceCard'
 import { services } from '../../constants'
 
 function Services() {
@@ -16,8 +16,8 @@ function Services() {
           </p>
         </div>
         <div className="relative mx-auto mt-16 max-w-xl space-y-16  lg:mx-0 lg:max-w-none">
-          {services.map((service) => (
-            <ServiceComponent key={service.slug} service={service} />
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
       </Container>

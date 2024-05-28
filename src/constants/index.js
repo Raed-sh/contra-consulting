@@ -60,7 +60,7 @@ export const services = [
   },
   {
     title: 'Compliance and Employee Relations',
-    slug: '',
+    slug: 'compliance-and-employee-relations',
     description:
       'We ensure adherence to laws and regulations while fostering positive relationships between the organization and its employees. ',
     tags: [

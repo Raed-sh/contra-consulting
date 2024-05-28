@@ -1,12 +1,13 @@
 'use client'
 import { Button } from '@/components/Button'
-import { FieldPath, UseFormReturn, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { services } from '../constants'
 import { forwardRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify'
 
-const SERVICE_ID = 'service_2fw1v6m'
-const TEMPLATE_ID = 'template_smgqupo'
+const SERVICE_ID = 'service_nlufji3'
+const TEMPLATE_ID = 'template_433pvl4'
 const PUBLIC_KEY = 'gYKo7illt92y7QfLg'
 
 function ContactForm() {
@@ -37,15 +38,13 @@ function ContactForm() {
       service: selectedServices.join(', '),
       message: data.message,
     }
-    console.log(templateParams)
     emailjs
       .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(() => {
-        alert('SUCCESSFULLT SENT!')
-        console.log('email send Successfully!')
+        toast.success('Your application submitted successfully')
         reset()
       })
-      .catch((err) => console.error('ERROR', err))
+      .catch((err) => toast.error('error', err))
   }
 
   const _services = services.map(({ title, slug }) => ({
@@ -69,7 +68,7 @@ function ContactForm() {
           name="name"
           autoComplete="name"
           placeholder="Jane Doe"
-          {...register('name', { required: true })}
+          {...register('name')}
         />
         <TextField
           label="Email"
@@ -77,7 +76,7 @@ function ContactForm() {
           type="email"
           autoComplete="email"
           placeholder="foobar@email.com"
-          {...register('email', { required: true })}
+          {...register('email')}
         />
         <TextField
           label="Phone"
@@ -86,7 +85,7 @@ function ContactForm() {
           autoComplete="tel"
           aria-describedby="phone-description"
           placeholder="+962 7 123-4567"
-          {...register('phone', { required: true })}
+          {...register('phone')}
         />
         <TextField
           label="Message"
@@ -101,9 +100,9 @@ function ContactForm() {
             Expected services
           </legend>
           <div className="mt-4 space-y-3">
-            {expectedServices.map(({ label, value }) => (
+            {expectedServices.map(({ label, value }, index) => (
               <CheckboxField
-                key={value}
+                key={`service-${index}`}
                 label={label}
                 name={value}
                 {...register(`service.${label}`)}

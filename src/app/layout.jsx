@@ -1,7 +1,9 @@
 import { Header } from '@/components/Header'
+import { ToastContainer } from 'react-toastify';
 import clsx from 'clsx'
 import { Inter, Lexend, Gochi_Hand } from 'next/font/google'
 import '@/styles/globals.css'
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -43,9 +45,11 @@ export default function RootLayout({ children }) {
           lexend.variable,
           gochiHand.variable
         )}
+        suppressHydrationWarning={true}
       >
         <Header />
         {children}
+        <ToastContainer />
       </body>
     </html>
   )

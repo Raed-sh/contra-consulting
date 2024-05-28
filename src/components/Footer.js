@@ -86,9 +86,14 @@ export function Footer({ newsletter = true }) {
               </div>
             </div>
             <div className="flex flex-col items-center lg:col-span-5 lg:items-start">
-              <p className="text-center text-lg text-slate-50 lg:max-w-sm lg:text-left">
-                Iced pumpkin ristretto irish trifecta robusta trade froth
-                affogato barista con barista cappuccino filter roast.
+              <p className="text-center text-lg text-slate-50 lg:max-w-md lg:text-left">
+                Are you prepared to improve the performance of your business and
+                HR operations?
+              </p>
+              <p className="text-center text-lg text-slate-50 lg:max-w-md lg:text-left">
+                Get in touch with us immediately to find more about our
+                comprehensive HR services and how we can customize plans to fit
+                your unique needs
               </p>
 
               <Button

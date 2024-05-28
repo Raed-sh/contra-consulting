@@ -2,10 +2,53 @@
 
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import { useForm } from 'react-hook-form'
+import countries from '../constants/countries'
+import departments from '../constants/departments'
 import { Button } from './Button'
+import { MdOutlineSupervisorAccount } from 'react-icons/md'
+import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify'
+
+const SERVICE_ID = 'service_nlufji3'
+const TEMPLATE_ID = 'template_smgqupo'
+const PUBLIC_KEY = 'gYKo7illt92y7QfLg'
 
 const CareerDialog = () => {
-  let [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: '',
+      phone: '',
+      nationality: '',
+      department: '',
+      resume: null,
+    },
+  })
+
+  const onSubmit = (data) => {
+    const templateParams = {
+      name: data.name,
+      phone: data.phone,
+      nationality: data.nationality,
+      department: data.department,
+      // resume: data.file,
+    }
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      .then(() => {
+        toast.success('Your application submitted successfully')
+        reset()
+        setIsOpen(false)
+      })
+      .catch((err) => console.error('ERROR', err))
+  }
 
   return (
     <>
@@ -15,6 +58,7 @@ const CareerDialog = () => {
         onClick={() => setIsOpen(true)}
       >
         Apply for Career
+        <MdOutlineSupervisorAccount />
       </Button>
       <Transition appear show={isOpen}>
         <Dialog
@@ -41,8 +85,8 @@ const CareerDialog = () => {
                   Fill out the form below to apply for the job.
                 </Dialog.Description>
                 <form
-                  action="https://fabform.io/f/YOUR_FORM_ID"
-                  method="POST"
+                  id="job-application-form"
+                  onSubmit={handleSubmit(onSubmit)}
                   className="mt-4"
                 >
                   <div className="mb-4">
@@ -57,29 +101,105 @@ const CareerDialog = () => {
                       id="name"
                       name="name"
                       className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                      required
+                      {...register('name', {
+                        required: 'Full Name is required',
+                      })}
                     />
+                    {errors.name && (
+                      <p className="text-sm text-red-500">
+                        {errors.name.message}
+                      </p>
+                    )}
                   </div>
 
                   <div className="mb-4">
                     <label
-                      htmlFor="email"
+                      htmlFor="phone"
                       className="block font-medium text-accent"
                     >
-                      Email Address
+                      Phone Number
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="tel"
+                      id="phone"
+                      name="phone"
                       className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                      required
+                      {...register('phone', {
+                        required: 'Phone Number is required',
+                      })}
                     />
+                    {errors.phone && (
+                      <p className="text-sm text-red-500">
+                        {errors.phone.message}
+                      </p>
+                    )}
                   </div>
 
                   <div className="mb-4">
                     <label
-                      htmlFor="resume"
+                      htmlFor="nationality"
+                      className="block font-medium text-accent"
+                    >
+                      Nationality
+                    </label>
+                    <select
+                      id="nationality"
+                      name="nationality"
+                      className="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      {...register('nationality', {
+                        required: 'Nationality is required',
+                      })}
+                    >
+                      <option disabled value="">
+                        Select your nationality
+                      </option>
+                      {countries.map((country) => (
+                        <option key={country} value={country}>
+                          {country}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.nationality && (
+                      <p className="text-sm text-red-500">
+                        {errors.nationality.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="mb-4">
+                    <label
+                      htmlFor="department"
+                      className="block font-medium text-accent"
+                    >
+                      Department
+                    </label>
+                    <select
+                      id="department"
+                      name="department"
+                      className="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      {...register('department', {
+                        required: 'Department is required',
+                      })}
+                    >
+                      <option value="" disabled>
+                        Select your department
+                      </option>
+                      {departments.map((department) => (
+                        <option key={department} value={department}>
+                          {department}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.department && (
+                      <p className="text-sm text-red-500">
+                        {errors.department.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="mb-4">
+                    <label
+                      htmlFor="cv"
                       className="block font-medium text-accent"
                     >
                       Upload Resume
@@ -89,6 +209,9 @@ const CareerDialog = () => {
                       id="resume"
                       name="resume"
                       className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      {...register('resume', {
+                        required: 'Resume is required',
+                      })}
                     />
                   </div>
 
