@@ -2,7 +2,7 @@
 import { Button } from '@/components/Button'
 import { useForm } from 'react-hook-form'
 import { services } from '../constants'
-import { forwardRef } from 'react'
+import { forwardRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 
@@ -15,7 +15,7 @@ function ContactForm() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({
     defaultValues: {
       name: '',
@@ -25,12 +25,25 @@ function ContactForm() {
       message: '',
     },
   })
+  const [isLoading, setIsLoading] = useState(false)
 
   const onSubmit = (data) => {
+    setIsLoading(true)
+
     const selectedServices = Object.keys(data.service).filter(
       (key) => data.service[key]
     )
 
+    if (
+      !data.name ||
+      !data.email ||
+      !data.phone ||
+      !selectedServices.length > 0
+    ) {
+      toast.error('Please fill out all required fields.')
+      setIsLoading(false)
+      return
+    }
     const templateParams = {
       name: data.name,
       email: data.email,
@@ -45,6 +58,7 @@ function ContactForm() {
         reset()
       })
       .catch((err) => toast.error('error', err))
+      .finally(() => setIsLoading(false))
   }
 
   const _services = services.map(({ title, slug }) => ({
@@ -112,8 +126,13 @@ function ContactForm() {
         </fieldset>
       </div>
       <div className="mt-10 border-t border-slate-200 pt-8">
-        <Button type="submit" className="w-full !text-base sm:!text-lg">
-          Get started
+        <Button
+          type="submit"
+          className="w-full !text-base sm:!text-lg"
+          isLoading={isLoading}
+          disabled={!isValid || isLoading}
+        >
+          Sumbit Application
         </Button>
       </div>
     </form>
@@ -140,7 +159,10 @@ const Label = ({ name, description, children }) => {
 }
 
 const TextField = forwardRef(
-  ({ label, name, type = 'text', rows = 5, className, ...props }, ref) => {
+  (
+    { label, name, type = 'text', rows = 5, className, error, ...props },
+    ref
+  ) => {
     return (
       <div className={className}>
         {label && <Label name={name}>{label}</Label>}
@@ -165,6 +187,7 @@ const TextField = forwardRef(
             />
           )}
         </div>
+        {error && <p className="text-sm text-red-500">{error}</p>}
       </div>
     )
   }
@@ -172,7 +195,7 @@ const TextField = forwardRef(
 
 TextField.displayName = 'TextField'
 
-const CheckboxField = forwardRef(({ label, name, ...props }, ref) => {
+const CheckboxField = forwardRef(({ label, name, error, ...props }, ref) => {
   return (
     <div className="flex items-start">
       <div className="flex h-6 items-center">
@@ -190,6 +213,7 @@ const CheckboxField = forwardRef(({ label, name, ...props }, ref) => {
           {label}
         </label>
       </div>
+      {error && <p className="text-sm text-red-500">{error}</p>}
     </div>
   )
 })

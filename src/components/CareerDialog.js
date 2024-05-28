@@ -16,12 +16,13 @@ const PUBLIC_KEY = 'gYKo7illt92y7QfLg'
 
 const CareerDialog = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({
     defaultValues: {
       name: '',
@@ -33,6 +34,13 @@ const CareerDialog = () => {
   })
 
   const onSubmit = (data) => {
+    setIsLoading(true)
+    if (!data.name || !data.nationality || !data.phone || !data.department) {
+      toast.error('Please fill out all required fields.')
+      setIsLoading(false)
+      return
+    }
+
     const templateParams = {
       name: data.name,
       phone: data.phone,
@@ -48,6 +56,9 @@ const CareerDialog = () => {
         setIsOpen(false)
       })
       .catch((err) => console.error('ERROR', err))
+      .finally(() => {
+        setIsLoading(false)
+      })
   }
 
   return (
@@ -209,9 +220,7 @@ const CareerDialog = () => {
                       id="resume"
                       name="resume"
                       className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                      {...register('resume', {
-                        required: 'Resume is required',
-                      })}
+                      {...register('resume')}
                     />
                   </div>
 
@@ -220,6 +229,8 @@ const CareerDialog = () => {
                       type="submit"
                       variant=""
                       className="rounded-md bg-secondary px-4 py-2 text-accent transition duration-300 ease-in-out hover:bg-primary hover:text-white"
+                      isLoading={isLoading}
+                      disabled={!isValid || isLoading}
                     >
                       Submit Application
                     </Button>
