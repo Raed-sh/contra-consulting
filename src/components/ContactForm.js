@@ -6,9 +6,9 @@ import { forwardRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 
-const SERVICE_ID = 'service_nlufji3'
-const TEMPLATE_ID = 'template_433pvl4'
-const PUBLIC_KEY = 'gYKo7illt92y7QfLg'
+const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_CONTACT_TEMPLATE_ID
 
 function ContactForm() {
   const {
