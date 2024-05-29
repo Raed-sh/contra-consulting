@@ -3,6 +3,7 @@
 const nextConfig = {
   output: 'export',
   distDir: '_static',
+  trailingSlash: true,
   reactStrictMode: true,
   images: {
     unoptimized: true,
