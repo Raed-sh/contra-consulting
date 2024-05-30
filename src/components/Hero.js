@@ -49,7 +49,7 @@ export function Hero() {
             businesses to improve
           </h1>
           <p className="mt-6 text-center text-lg leading-8 text-slate-700 lg:text-left">
-            CONTRA is a one-place human resources business solution. We are
+            Contra is a one-place human resources business solution. We are
             passionate about enhancing the way businesses approach human
             resources in a world of competing people management trends.
           </p>
@@ -89,7 +89,7 @@ export function Hero() {
               priority
             />
             <div>
-              <div className="absolute -top-6 right-12 inline-flex h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-secondary  px-8 text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 lg:-top-6 lg:left-44 lg:px-10 2xl:-left-48 2xl:top-14">
+              <div className="absolute -top-6 left-1/2 inline-flex h-12 w-max -translate-x-1/2 items-center justify-center gap-3.5 rounded-2xl bg-secondary px-8  text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 md:translate-x-0 lg:-top-6 lg:left-44 lg:px-10 2xl:-left-48 2xl:top-14">
                 7 years of TA experience
               </div>
               <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-primary  px-8 text-sm font-semibold text-white shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24 lg:px-10 xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">

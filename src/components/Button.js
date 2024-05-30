@@ -18,7 +18,7 @@ export function Button({
   ...props
 }) {
   className = clsx(
-    'inline-flex items-center rounded-full gap-2.5 justify-center px-7 py-3 text-md font-semibold leading-none outline-offset-2 transition-all duration-200 ease-in-out active:transition-none',
+    'inline-flex items-center rounded-full gap-0.5 justify-center  text-xs text-center px-2 py-3 md:px-7 md:py-3 md:text-md font-semibold leading-none outline-offset-2 transition-all duration-200 ease-in-out active:transition-none',
     variantStyles[`${variant}ClassName`],
     'disabled:opacity-50 disabled:select-none disabled:cursor-not-allowed',
 

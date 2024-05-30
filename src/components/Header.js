@@ -11,7 +11,7 @@ export function Header() {
     <header className="h-24 border-b border-slate-200/80 bg-white">
       <Container className="flex h-full w-full items-center">
         <nav className="relative z-50 flex w-full items-center justify-between ">
-          <Link href={'/'} className="relative h-52 w-52">
+          <Link href={'/'} className="relative h-32 w-32 md:h-52 md:w-52 ">
             <Image
               src={'/images/Logo.png'}
               fill

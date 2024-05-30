@@ -23,7 +23,7 @@ export function Experience() {
 
                 <span className="relative text-sky-700">all-in-one</span>
               </span>{' '}
-              project solution!
+              HR Solution!
             </h2>
           </div>
           <div>
