@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { Footer } from '@/components/Footer'
 
-import image from '@/images/contact.jpg'
+import image from '@/images/team.jpg'
 import ContactForm from '../../components/ContactForm'
 
 export const metadata = {
@@ -24,7 +24,7 @@ export default function ContactPage() {
               <div className="absolute inset-y-0 -left-full hidden w-full bg-slate-50 lg:block" />
               <div className="relative mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                 <h2 className="font-display text-4xl font-semibold leading-tight text-[#00215E] sm:text-5xl sm:leading-tight lg:text-[40px] lg:leading-tight xl:text-5xl xl:leading-tight">
-                  How can I help you? Let’s get in touch<span className="ml-4 sm:ml-6">👋</span>
+                  How can we help you? Let’s get in touch<span className="ml-4 sm:ml-6">👋</span>
                 </h2>
 
                 <div className="aspect-h-2 aspect-w-3 mt-12 sm:mt-16">

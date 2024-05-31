@@ -5,9 +5,6 @@ import { Container } from './Container'
 import { DribbbleIcon, InstagramIcon, TwitterIcon } from './SocialIcons'
 import heroPortrait from '@/images/hero-0.png'
 import heroBG from '@/images/home-hero-gradient.svg'
-import figma from '@/images/logos/icons/figma.png'
-import tailwind from '@/images/logos/icons/tailwindcss.png'
-import sketch from '@/images/logos/icons/sketch.png'
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
@@ -89,13 +86,13 @@ export function Hero() {
               priority
             />
             <div>
-              <div className="absolute -top-6 left-1/2 inline-flex h-12 w-max -translate-x-1/2 items-center justify-center gap-3.5 rounded-2xl bg-secondary px-8  text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 md:translate-x-0 lg:-top-6 lg:left-44 lg:px-10 2xl:-left-48 2xl:top-14">
+              <div className="absolute -top-6 left-1/2 inline-flex h-12 w-max -translate-x-1/2 items-center justify-center gap-3.5 rounded-2xl bg-secondary px-8  text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 md:translate-x-0 lg:-top-6 lg:left-44  2xl:-left-20 2xl:top-14">
                 7 years of TA experience
               </div>
-              <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-primary  px-8 text-sm font-semibold text-white shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24 lg:px-10 xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
+              <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-primary  px-8 text-sm font-semibold text-white shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24  xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
                 250 success stories
               </div>
-              <div className="absolute top-[350px] hidden h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-accent px-8 text-sm font-semibold text-white shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-full md:inline-flex md:-translate-x-32 lg:left-48 lg:hidden lg:px-10 2xl:left-full 2xl:inline-flex 2xl:-translate-x-28">
+              <div className="absolute top-[350px] hidden h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-accent px-8 text-sm font-semibold text-white shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-full md:inline-flex md:-translate-x-32 lg:left-48 lg:hidden  2xl:left-full 2xl:inline-flex 2xl:-translate-x-28">
                 <span className="">Tailored Solutions</span>
               </div>
             </div>
