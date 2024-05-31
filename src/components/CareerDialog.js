@@ -208,7 +208,8 @@ const CareerDialog = () => {
                     )}
                   </div>
 
-                  <div className="mb-4">
+                  {/* TODO: will used later when we upgrade emailjs account */}
+                  {/* <div className="mb-4">
                     <label
                       htmlFor="cv"
                       className="block font-medium text-accent"
@@ -222,7 +223,7 @@ const CareerDialog = () => {
                       className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       {...register('resume')}
                     />
-                  </div>
+                  </div> */}
 
                   <div className="flex justify-end">
                     <Button
