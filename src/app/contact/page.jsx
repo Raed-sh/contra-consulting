@@ -10,7 +10,9 @@ export const metadata = {
   title: 'Contact us',
   description:
     "Whether you're looking to kickstart a new project or simply want to say hi, feel free to get in touch.",
-}
+    keywords:["HR", "consultation", "business in jordan","HR in jordan","Business", "management" ]
+
+  }
 
 
 
