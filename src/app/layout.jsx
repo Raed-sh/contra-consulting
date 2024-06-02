@@ -32,7 +32,7 @@ export const metadata = {
       'Contra Consulting',
   },
   description:"HR and consulting compnay in MENA region",
-  keywords:["HR", "consultation", "business in jordan","HR in jordan","Business", "management" ]
+  keywords:["contra", "contrahr", "Contrahr", "HR", "consultation", "business in jordan","HR in jordan","Business", "management" ]
   
 }
 
