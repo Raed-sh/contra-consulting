@@ -31,13 +31,13 @@ const socialLinks = [
   {
     label: 'Instagram',
     icon: InstagramIcon,
-    href: '#',
+    href: 'https://www.instagram.com/contra.hr/',
   },
 
   {
     label: 'LinkedIn',
     icon: LinkedInIcon,
-    href: '#',
+    href: 'https://www.linkedin.com/company/contrahr/',
   },
 ]
 

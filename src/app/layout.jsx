@@ -28,13 +28,27 @@ export const metadata = {
   metadataBase: new URL('https://contrahr.com'),
   title: {
     template: '%s - Contra Consulting',
-    default:
-      'Contra Consulting',
+    default: 'Contra Consulting',
   },
-  description:"HR and consulting compnay in MENA region",
-  keywords:["contra", "contrahr", "Contrahr", "HR", "consultation", "business in jordan","HR in jordan","Business", "management" ]
-  
+  description: "HR and consulting company in the MENA region",
+  keywords: [
+    "Contra", 
+    "ContraHR", 
+    "HR", 
+    "consultation", 
+    "business consultation", 
+    "HR services", 
+    "HR consulting", 
+    "business in Jordan", 
+    "HR in Jordan", 
+    "management consulting", 
+    "MENA consulting", 
+    "MENA HR services",
+    "Contra HR",
+    "Contra hr"
+  ]
 }
+
 
 export default function RootLayout({ children }) {
   return (

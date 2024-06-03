@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './Button'
 import { Container } from './Container'
-import { DribbbleIcon, InstagramIcon, TwitterIcon } from './SocialIcons'
+import { LinkedInIcon, InstagramIcon, WhatsAppIcon } from './SocialIcons'
 import heroPortrait from '@/images/hero-0.png'
 import heroBG from '@/images/home-hero-gradient.svg'
 
@@ -57,21 +57,22 @@ export function Hero() {
 
             <div className="flex gap-3 sm:gap-4">
               <SocialLink
-                href="https://dribbble.com"
-                aria-label="Follow on Dribbble"
-                icon={DribbbleIcon}
+                href="https://www.linkedin.com/company/contrahr/"
+                aria-label="Follow on Linkedin"
+                icon={LinkedInIcon}
               />
 
               <SocialLink
-                href="https://instagram.com"
+                href="https://www.instagram.com/contra.hr/"
                 aria-label="Follow on Instagram"
                 icon={InstagramIcon}
               />
-              <SocialLink
-                href="https://twitter.com"
-                aria-label="Follow on Twitter"
-                icon={TwitterIcon}
-              />
+
+              {/* <SocialLink
+                href="https://wa.me/whatsappphonenumber?text=urlencodedtext"
+                aria-label="contact with WhatsApp"
+                icon={WhatsAppIcon}
+              /> */}
             </div>
           </div>
         </div>
