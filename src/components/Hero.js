@@ -43,7 +43,7 @@ export function Hero() {
               </svg>
               <span className="relative">Helping</span>
             </span>{' '}
-            businesses to improve
+            Businesses to Improvement
           </h1>
           <p className="mt-6 text-center text-lg leading-8 text-slate-700 lg:text-left">
             Contra is a one-place human resources business solution. We are

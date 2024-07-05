@@ -23,7 +23,7 @@ export function Experience() {
 
                 <span className="relative text-sky-700">all-in-one</span>
               </span>{' '}
-              HR Solution!
+              project Solution!
             </h2>
           </div>
           <div>
@@ -543,9 +543,11 @@ export function Experience() {
                       fill="currentColor"
                     />
                   </svg>
-                  <button
+                  <a
                     className="relative left-1/2 top-1/2 inline-flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-slate-900 duration-200 hover:bg-slate-800 lg:h-20 lg:w-20"
                     aria-label="Download Profile"
+                    href="/files/company-profile.pdf"
+                    download="Company Profile - Contra"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -575,7 +577,7 @@ export function Experience() {
                         <path d="M2,22v5a3,3,0,0,0,3,3H27a3,3,0,0,0,3-3V22"></path>
                       </g>
                     </svg>
-                  </button>
+                  </a>
                 </div>
                 <dl className="absolute bottom-0 right-1/2 grid w-max translate-x-1/2 translate-y-3/4 grid-cols-2 gap-5 rounded-2xl bg-sky-700/90 px-6 py-8 text-center backdrop-blur-sm sm:translate-y-1/2 sm:gap-12 sm:p-10 lg:right-20 lg:translate-x-0">
                   <div className="flex flex-col gap-1">
