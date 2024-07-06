@@ -7,8 +7,9 @@ import { Tooltip } from 'react-tooltip'
 import Link from 'next/link'
 import Image from 'next/image'
 import workBG from '@/images/featured-work-item-bg.svg'
-
+import { useTranslation } from 'next-export-i18n'
 function ServiceCard({ service }) {
+  const { t } = useTranslation()
   const { title, description, tags, url, thumbnail } = service
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -63,10 +64,10 @@ function ServiceCard({ service }) {
             {/* <p>{value}</p> */}
           </div>
           <Link
-            href={url}
+            href={url || '/contact'}
             className="group mt-14 flex w-fit  items-center gap-2 rounded-lg bg-secondary p-2 text-lg font-medium text-white duration-200 ease-in-out hover:text-primary sm:mt-16 sm:text-md"
           >
-            Get more information
+            {t('homePage.services.moreInformation')}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -82,7 +83,7 @@ function ServiceCard({ service }) {
           </Link>
         </div>
         <Link
-          href={url ?? '/contact'}
+          href={url || '/contact'}
           className="group aspect-h-9 aspect-w-16 relative order-1 h-full w-full overflow-hidden rounded-2xl ring-1 ring-slate-100/75 lg:order-2 lg:col-span-6 lg:rounded-l-none lg:rounded-r-none xl:col-span-7 xl:rounded-tl-2xl"
         >
           <Image

@@ -1,14 +1,23 @@
+'use client'
+
 import Image from 'next/image'
 import { Container } from './Container'
+import { useTranslation } from 'next-export-i18n'
 
 export function Experience() {
+  const { t } = useTranslation()
+  const [head0, head1, ...rest] = t('homePage.experience.heading').split('|')
+  const [feature0, feature1, feature2] = t('homePage.experience.features', {
+    returnObjects: true,
+  })
+  const achievements = t('homePage.experience.achievements')
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-slate-50 to-white pb-40 pt-20 sm:pt-24 lg:pb-64 lg:pt-32">
       <Container>
         <div className="mx-auto grid max-w-xl items-center gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-display text-4xl font-semibold text-[#00215E] sm:text-5xl">
-              We&apos;re your{' '}
+              {head0}
               <span className="relative whitespace-nowrap">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -21,16 +30,14 @@ export function Experience() {
                   <path d="M247.564 18.5808C241.772 13.3568 232.473 12.7526 225.225 11.4427C217.124 9.97398 208.996 8.57034 200.846 7.46096C186.542 5.51305 172.169 4.08857 157.79 3.01565C126.033 0.645858 94.0929 0.0338786 62.3387 2.36982C42.1785 3.85419 22.008 5.90888 2.32917 10.8464C-0.0155171 11.4349 0.207047 14.6719 2.6889 14.7084C22.0261 14.9896 41.3866 12.6406 60.7109 11.8568C79.9471 11.0808 99.2274 10.6719 118.484 10.9558C142.604 11.3125 166.719 12.8334 190.722 15.5156C199.956 16.5469 209.195 17.6016 218.411 18.8255C227.864 20.0808 237.259 22 246.767 20.7422C247.709 20.6198 248.426 19.3568 247.564 18.5808Z" />
                 </svg>
 
-                <span className="relative text-sky-700">all-in-one</span>
-              </span>{' '}
-              project Solution!
+                <span className="relative text-sky-700">{head1}</span>
+              </span>
+              {...rest}
             </h2>
           </div>
           <div>
             <p className="text-lg leading-8 text-slate-700">
-              As a team of seasoned HR professionals, we bring together a wealth
-              of knowledge and experience to deliver innovative HR solutions,
-              tailored to the needs of startups and small businesses.
+              {t('homePage.experience.description')}
             </p>
           </div>
         </div>
@@ -80,11 +87,10 @@ export function Experience() {
                     </div>
                     <div>
                       <h3 className="font-display text-xl font-medium text-[#00215E] ">
-                        Excellence
+                        {feature0.title}
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
-                        We take pride in doing things well. All client work is
-                        done with the best quality possible.
+                        {feature0.description}
                       </p>
                     </div>
                   </div>
@@ -151,11 +157,10 @@ export function Experience() {
                     </div>
                     <div>
                       <h3 className="font-display text-xl font-medium text-[#00215E] ">
-                        Speed
+                        {feature1.title}
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
-                        We like to work hard and fast. Aware how important
-                        deadlines are to our clients
+                        {feature1.description}
                       </p>
                     </div>
                   </div>
@@ -221,11 +226,10 @@ export function Experience() {
                     </div>
                     <div>
                       <h3 className="font-display text-xl font-medium text-[#00215E] ">
-                        Responsiveness
+                        {feature2.title}
                       </h3>
                       <p className="mt-2.5 text-base text-slate-700">
-                        You can rely on us to be responsive and clear whenever
-                        we work together.
+                        {feature2.description}
                       </p>
                     </div>
                   </div>
@@ -260,7 +264,7 @@ export function Experience() {
                   </defs>
                 </svg>
                 <span className="inline-block max-w-[220px] -rotate-12 transform font-writing text-2xl tracking-wide text-slate-600">
-                  What differentiates us from others
+                  {t('homePage.experience.legend')}
                 </span>
               </div>
             </ul>
@@ -580,23 +584,16 @@ export function Experience() {
                   </a>
                 </div>
                 <dl className="absolute bottom-0 right-1/2 grid w-max translate-x-1/2 translate-y-3/4 grid-cols-2 gap-5 rounded-2xl bg-sky-700/90 px-6 py-8 text-center backdrop-blur-sm sm:translate-y-1/2 sm:gap-12 sm:p-10 lg:right-20 lg:translate-x-0">
-                  <div className="flex flex-col gap-1">
-                    <dt className="text-sm font-semibold leading-6 text-sky-50">
-                      Years of experience
-                    </dt>
-                    <dd className="order-first text-3xl font-extrabold text-white sm:text-4xl">
-                      10
-                    </dd>
-                  </div>
-
-                  <div className="flex flex-col gap-1">
-                    <dt className="text-sm font-semibold leading-6 text-sky-50">
-                      Projects completed
-                    </dt>
-                    <dd className="order-first text-3xl font-extrabold text-white sm:text-4xl">
-                      150
-                    </dd>
-                  </div>
+                  {achievements.map(({ label, count }) => (
+                    <div key={label} className="flex flex-col gap-1">
+                      <dd className="order-first text-3xl font-extrabold text-white sm:text-4xl">
+                        {count}
+                      </dd>
+                      <dt className="text-sm font-semibold leading-6 text-sky-50">
+                        {label}
+                      </dt>
+                    </div>
+                  ))}
                 </dl>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

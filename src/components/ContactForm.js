@@ -1,16 +1,20 @@
 'use client'
 import { Button } from '@/components/Button'
 import { useForm } from 'react-hook-form'
-import { services } from '../constants'
 import { forwardRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
+import { useTranslation, useSelectedLanguage } from 'next-export-i18n'
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_CONTACT_TEMPLATE_ID
 
 function ContactForm() {
+  const { t } = useTranslation()
+  const { lang } = useSelectedLanguage()
+  const services = t('homePage.services.services', { returnObjects: true })
+
   const {
     register,
     handleSubmit,
@@ -40,7 +44,7 @@ function ContactForm() {
       !data.phone ||
       !selectedServices.length > 0
     ) {
-      toast.error('Please fill out all required fields.')
+      toast.error(t('contactPage.form.requiredFieldsError'))
       setIsLoading(false)
       return
     }
@@ -54,7 +58,7 @@ function ContactForm() {
     emailjs
       .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(() => {
-        toast.success('Your application submitted successfully')
+        toast.success(t('contactPage.form.successMessage'))
         reset()
       })
       .catch((err) => toast.error('error', err))
@@ -69,7 +73,7 @@ function ContactForm() {
   const expectedServices = [
     ..._services,
     {
-      label: 'Other',
+      label: lang === 'ar' ? 'خدمات مختلفة' : 'Other',
       value: 'other',
     },
   ]
@@ -78,14 +82,14 @@ function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="mt-10">
       <div className="space-y-7">
         <TextField
-          label="Name"
+          label={t('contactPage.form.nameLabel')}
           name="name"
           autoComplete="name"
-          placeholder="Jane Doe"
+          placeholder="Jon Doe"
           {...register('name')}
         />
         <TextField
-          label="Email"
+          label={t('contactPage.form.emailLabel')}
           name="email"
           type="email"
           autoComplete="email"
@@ -93,7 +97,7 @@ function ContactForm() {
           {...register('email')}
         />
         <TextField
-          label="Phone"
+          label={t('contactPage.form.phoneLabel')}
           name="phone"
           type="tel"
           autoComplete="tel"
@@ -102,16 +106,16 @@ function ContactForm() {
           {...register('phone')}
         />
         <TextField
-          label="Message"
+          label={t('contactPage.form.messageLabel')}
           name="message"
           type="textarea"
           aria-describedby="message-description"
-          placeholder="Tell us a little bit about your project..."
+          // placeholder="Tell us a little bit about your project..."
           {...register('message')}
         />
         <fieldset>
           <legend className="block text-md font-medium leading-6 text-[#00215E]">
-            Expected services
+            {t('contactPage.form.expectedServicesLegend')}
           </legend>
           <div className="mt-4 space-y-3">
             {expectedServices.map(({ label, value }, index) => (
@@ -132,7 +136,7 @@ function ContactForm() {
           isLoading={isLoading}
           disabled={!isValid || isLoading}
         >
-          Sumbit Application
+          {t('contactPage.form.submitButton')}
         </Button>
       </div>
     </form>

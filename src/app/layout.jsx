@@ -1,9 +1,9 @@
 import { Header } from '@/components/Header'
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify'
 import clsx from 'clsx'
 import { Inter, Lexend, Gochi_Hand } from 'next/font/google'
 import '@/styles/globals.css'
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,35 +22,32 @@ const gochiHand = Gochi_Hand({
   weight: '400',
 })
 
-
-
 export const metadata = {
   metadataBase: new URL('https://contrahr.com'),
   title: {
     template: '%s - Contra Consulting',
     default: 'Contra Consulting',
   },
-  description: "HR and consulting company in the MENA region",
+  description: 'HR and consulting company in the MENA region',
   keywords: [
-    "Contra", 
-    "ContraHR", 
-    "HR", 
-    "consultation", 
-    "business consultation", 
-    "HR services", 
-    "HR consulting", 
-    "business in Jordan", 
-    "HR in Jordan", 
-    "management consulting", 
-    "MENA consulting", 
-    "MENA HR services",
-    "Contra HR",
-    "Contra hr"
-  ]
+    'Contra',
+    'ContraHR',
+    'HR',
+    'consultation',
+    'business consultation',
+    'HR services',
+    'HR consulting',
+    'business in Jordan',
+    'HR in Jordan',
+    'management consulting',
+    'MENA consulting',
+    'MENA HR services',
+    'Contra HR',
+    'Contra hr',
+  ],
 }
 
-
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body

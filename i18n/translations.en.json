@@ -1,0 +1,201 @@
+{
+  "careerDialog": {
+    "applyForCareer": "Apply for Career",
+    "jobApplicationForm": "Job Application Form",
+    "fillOutForm": "Fill out the form below to apply for the job.",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "nationality": "Nationality",
+    "selectNationality": "Select your nationality",
+    "department": "Department",
+    "selectDepartment": "Select your department",
+    "submitApplication": "Submit Application",
+    "requiredField": "{{field}} is required",
+    "pleaseFillOut": "Please fill out all required fields.",
+    "applicationSubmitted": "Your application submitted successfully"
+  },
+  "header": {
+    "bookCall": "Book a call"
+  },
+  "footer": {
+    "heading": "Lets make something great together",
+    "description": " Are you prepared to improve the performance of your business and HR operations? \n Get in touch with us immediately to find out our comprehensive HR services and how we can customize plans to fit your unique needs",
+    "copyRight": "Contra Consulting. All rights reserved.",
+    "socials": {
+      "email": "Email us",
+      "instagram": "Instagram",
+      "linkedin": "Linkedin"
+    }
+  },
+  "homePage": {
+    "hero": {
+      "heading": "Helping businesses improve",
+      "description": "Contra is a one-place human resources business solution. We are passionate about enhancing the way businesses approach human resources in a world of competing people management trends.",
+      "bookCallButton": "Book a call with us",
+      "experienceBadge": "7 years of Talent Acquisition Experience",
+      "successStoriesBadge": "250 success stories",
+      "tailoredSolutionsBadge": "Tailored Solutions"
+    },
+
+    "experience": {
+      "heading": "We're your | all-in-one | project Solution!",
+      "description": "As a team of seasoned HR professionals, we bring together a wealth of knowledge and experience to deliver innovative HR solutions, tailored to the needs of startups and small businesses.",
+      "features": [
+        {
+          "title": "Excellence",
+          "description": "We take pride in doing things well. All client work is done with the highest quality possible."
+        },
+        {
+          "title": "Speed",
+          "description": "We like to work hard and fast. Aware how important deadlines are to our clients"
+        },
+        {
+          "title": "Responsiveness",
+          "description": "You can rely on us to be responsive and clear whenever we work together."
+        }
+      ],
+      "legend": "What differentiates us from others",
+      "achievements": [
+        { "label": "Years of experience", "count": "10" },
+        { "label": "Projects completed", "count": "150" }
+      ]
+    },
+    "services": {
+      "heading": "Check out our Services",
+      "description": "Our goal is to deliver innovative HR solutions that enhance workplace efficiency and employee satisfaction.",
+      "moreInformation": "Get more information",
+
+      "services": [
+        {
+          "title": "Strategic HR Planning and Organizational Development",
+          "description": "We align HR management with organizational goals to ensure the right people are in the right roles and improve effectiveness and adaptability through workforce planning, organizational design, restructuring, succession planning, and change management.",
+          "tags": [
+            {
+              "key": "Strategic Workforce Planning",
+              "value": "We help you forecasting future workforce needs and developing strategies to ensure the organization has the right talent on time to achieve its goals."
+            },
+            {
+              "key": "Organizational Design",
+              "value": "We provide expertise in structuring an organization to optimize efficiency and achieve strategic objectives, including roles, responsibilities, and workflows."
+            },
+            {
+              "key": "Restructuring",
+              "value": "We assist in reorganizing an organization's structure to improve efficiency, adapt to changes, or address issues, often involving changes in hierarchy, roles, or operations."
+            },
+            {
+              "key": "Succession Planning",
+              "value": "We identify and develop internal talent to fill key leadership and critical roles, ensuring continuity and leadership stability."
+            },
+            {
+              "key": "Change Management",
+              "value": "We guide individuals, teams, and organizations through transitions to new ways of working."
+            }
+          ]
+        },
+        {
+          "title": "Talent Acquisition and Recruitment",
+          "description": "We create strategies and processes to attract, identify, and hire qualified candidates to meet an organization's needs.",
+          "tags": [
+            {
+              "key": "Recruitment and Selection",
+              "value": "Attracting, screening, and selecting qualified candidates"
+            },
+            {
+              "key": "Job Analysis",
+              "value": "Determining job duties, responsibilities, and required qualifications."
+            },
+            {
+              "key": "Employer Branding",
+              "value": "Promoting the company as an employer of choice to attract top talent."
+            }
+          ]
+        },
+        {
+          "title": "Compliance and Employee Relations",
+          "description": "We ensure adherence to laws and regulations while fostering positive relationships between the organization and its employees.",
+          "tags": [
+            {
+              "key": "Policy and Procedures",
+              "value": "Establishing and enforcing rules and guidelines to ensure legal compliance and organizational consistency."
+            },
+            {
+              "key": "Employee Relations",
+              "value": "Managing relationships between the employer and employees to maintain a positive and productive work environment."
+            },
+            {
+              "key": "HR Technology and Analytics",
+              "value": "Using technology and data analysis to improve HR processes, decision-making, and overall efficiency."
+            }
+          ]
+        },
+        {
+          "title": "Talent Management",
+          "description": "We develop and retain employees to maximize their potential and align their goals with the organization's objectives.",
+          "tags": [
+            {
+              "key": "Career Pathing",
+              "value": "Creating structured career development plans for employees."
+            },
+            {
+              "key": "Performance Management",
+              "value": "Assessing and improving employee performance through regular evaluations and feedback."
+            },
+            {
+              "key": "Learning and Development",
+              "value": "Providing training and development opportunities to enhance employee skills and knowledge."
+            },
+            {
+              "key": "Retention Strategies",
+              "value": "Implementing initiatives to retain top talent and reduce turnover."
+            }
+          ]
+        },
+        {
+          "title": "HR Outsourcing and Managed Services",
+          "description": "Involve delegating HR functions to external providers to improve efficiency and focus on core business activities.",
+          "tags": [
+            {
+              "key": "Payroll Processing",
+              "value": "Managing employee salary payments, tax withholdings, and related financial tasks."
+            },
+            {
+              "key": "HR Administration",
+              "value": "Handling administrative tasks such as employee records, benefits administration, and compliance documentation."
+            },
+            {
+              "key": "Compliance Monitoring",
+              "value": "Ensuring adherence to legal and regulatory requirements."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "contactPage": {
+    "heading": "How can we help you? Let’s get in touch",
+    "imageAlt": "Team working together",
+    "reachUs": "You can reach us at the following",
+    "contactDetails": {
+      "email": {
+        "title": "Email us",
+        "description": "Average response time within 1 hou"
+      },
+      "phone": {
+        "title": "Call us",
+        "description": "Available from Sunday to Thursday from 9:00AM to 5:00PM"
+      }
+    },
+    "form": {
+      "heading": "Fill out the form below to get started",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "messageLabel": "Message",
+      "expectedServicesLegend": "Expected services",
+      "submitButton": "Submit Application",
+      "requiredFieldsError": "Please fill out all required fields.",
+      "successMessage": "Your application submitted successfully",
+      "errorMessage": "Error occurred while submitting the form. Please try again."
+    }
+  }
+}

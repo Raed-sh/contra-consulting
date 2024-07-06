@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
@@ -13,6 +14,7 @@ import {
   GitHubIcon,
   EmailIcon,
 } from './SocialIcons'
+import { useTranslation } from 'next-export-i18n'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -24,18 +26,18 @@ const links = [
 
 const socialLinks = [
   {
-    label: 'Email me',
+    label: 'email',
     icon: EmailIcon,
     href: '/contact',
   },
   {
-    label: 'Instagram',
+    label: 'instagram',
     icon: InstagramIcon,
     href: 'https://www.instagram.com/contra.hr/',
   },
 
   {
-    label: 'LinkedIn',
+    label: 'linkedin',
     icon: LinkedInIcon,
     href: 'https://www.linkedin.com/company/contrahr/',
   },
@@ -54,6 +56,8 @@ function SocialLink({ icon: Icon, label, ...props }) {
 }
 
 export function Footer({ newsletter = true }) {
+  const { t } = useTranslation()
+
   return (
     <section className={clsx(newsletter && 'pt-12 sm:pt-16')}>
       <footer className="overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32">
@@ -61,7 +65,7 @@ export function Footer({ newsletter = true }) {
           <div className="mx-auto grid max-w-xl items-center gap-5 lg:mx-0 lg:max-w-none lg:grid-cols-12 lg:gap-12 xl:gap-20">
             <div className="lg:col-span-7">
               <h3 className="text-center font-display text-4xl font-semibold text-white sm:text-5xl lg:max-w-xl lg:text-left">
-                Lets make something great together
+                {t('footer.heading')}
               </h3>
               <div className="hidden lg:block">
                 <Button
@@ -69,7 +73,7 @@ export function Footer({ newsletter = true }) {
                   variant="primaryOnDark"
                   className="mt-12"
                 >
-                  Book a call
+                  {t('header.bookCall')}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -86,22 +90,24 @@ export function Footer({ newsletter = true }) {
               </div>
             </div>
             <div className="flex flex-col items-center lg:col-span-5 lg:items-start">
-              <p className="text-center text-lg text-slate-50 lg:max-w-md lg:text-left">
-                Are you prepared to improve the performance of your business and
-                HR operations?
-              </p>
-              <p className="text-center text-lg text-slate-50 lg:max-w-md lg:text-left">
-                Get in touch with us immediately to find more about our
-                comprehensive HR services and how we can customize plans to fit
-                your unique needs
-              </p>
+              {t('footer.description')
+                .split('\n')
+                .map((text, idx) => (
+                  <p
+                    key={`${idx * 2}-text`}
+                    className="text-center text-lg text-slate-50 lg:max-w-md lg:text-left"
+                  >
+                    {text}
+                  </p>
+                ))}
 
               <Button
                 href="/contact"
                 variant="primaryOnDark"
                 className="mt-10 lg:hidden"
               >
-                Book a call
+                {t('header.bookCall')}
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -120,7 +126,7 @@ export function Footer({ newsletter = true }) {
                   <SocialLink
                     key={`footer-social-link-${socialLink.label}`}
                     icon={socialLink.icon}
-                    label={socialLink.label}
+                    label={t(`footer.socials.${socialLink.label}`)}
                     href={socialLink.href}
                   />
                 ))}
@@ -141,8 +147,7 @@ export function Footer({ newsletter = true }) {
               ))}
             </div> */}
             <p className="mt-8 text-base text-secondary md:mt-0">
-              © {new Date().getFullYear()} Contra Consulting. All rights
-              reserved.
+              © {new Date().getFullYear()} {t('footer.copyRight')}
             </p>
           </div>
         </Container>

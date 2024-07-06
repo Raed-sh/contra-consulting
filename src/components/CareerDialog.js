@@ -10,11 +10,15 @@ import { MdOutlineSupervisorAccount } from 'react-icons/md'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 
+import { useTranslation } from 'next-export-i18n'
+
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_CAREER_TEMPLATE_ID
 
 const CareerDialog = () => {
+  const { t } = useTranslation()
+
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -36,7 +40,7 @@ const CareerDialog = () => {
   const onSubmit = (data) => {
     setIsLoading(true)
     if (!data.name || !data.nationality || !data.phone || !data.department) {
-      toast.error('Please fill out all required fields.')
+      toast.error(t('careerDialog.pleaseFillOut'))
       setIsLoading(false)
       return
     }
@@ -51,7 +55,7 @@ const CareerDialog = () => {
     emailjs
       .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(() => {
-        toast.success('Your application submitted successfully')
+        toast.success(t('careerDialog.applicationSubmitted'))
         reset()
         setIsOpen(false)
       })
@@ -68,7 +72,7 @@ const CareerDialog = () => {
         className={'bg-accent text-white'}
         onClick={() => setIsOpen(true)}
       >
-        Apply for Career
+        {t('careerDialog.applyForCareer')}
         <MdOutlineSupervisorAccount />
       </Button>
       <Transition appear show={isOpen}>
@@ -90,10 +94,10 @@ const CareerDialog = () => {
             >
               <Dialog.Panel className="w-full max-w-lg transform rounded-lg bg-white p-8 shadow-lg transition-all">
                 <Dialog.Title className="text-2xl font-bold text-primary">
-                  Job Application Form
+                  {t('careerDialog.jobApplicationForm')}
                 </Dialog.Title>
                 <Dialog.Description className="text-primary">
-                  Fill out the form below to apply for the job.
+                  {t('careerDialog.fillOutForm')}
                 </Dialog.Description>
                 <form
                   id="job-application-form"
@@ -105,7 +109,7 @@ const CareerDialog = () => {
                       htmlFor="name"
                       className="block font-medium text-accent"
                     >
-                      Full Name
+                      {t('careerDialog.fullName')}
                     </label>
                     <input
                       type="text"
@@ -113,7 +117,9 @@ const CareerDialog = () => {
                       name="name"
                       className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       {...register('name', {
-                        required: 'Full Name is required',
+                        required: t('careerDialog.requiredField', {
+                          field: t('careerDialog.fullName'),
+                        }),
                       })}
                     />
                     {errors.name && (
@@ -128,7 +134,7 @@ const CareerDialog = () => {
                       htmlFor="phone"
                       className="block font-medium text-accent"
                     >
-                      Phone Number
+                      {t('careerDialog.phoneNumber')}
                     </label>
                     <input
                       type="tel"
@@ -136,7 +142,9 @@ const CareerDialog = () => {
                       name="phone"
                       className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       {...register('phone', {
-                        required: 'Phone Number is required',
+                        required: t('careerDialog.requiredField', {
+                          field: t('careerDialog.phoneNumber'),
+                        }),
                       })}
                     />
                     {errors.phone && (
@@ -151,18 +159,20 @@ const CareerDialog = () => {
                       htmlFor="nationality"
                       className="block font-medium text-accent"
                     >
-                      Nationality
+                      {t('careerDialog.nationality')}
                     </label>
                     <select
                       id="nationality"
                       name="nationality"
                       className="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       {...register('nationality', {
-                        required: 'Nationality is required',
+                        required: t('careerDialog.requiredField', {
+                          field: t('careerDialog.nationality'),
+                        }),
                       })}
                     >
                       <option disabled value="">
-                        Select your nationality
+                        {t('careerDialog.selectNationality')}
                       </option>
                       {countries.map((country) => (
                         <option key={country} value={country}>
@@ -182,18 +192,20 @@ const CareerDialog = () => {
                       htmlFor="department"
                       className="block font-medium text-accent"
                     >
-                      Department
+                      {t('careerDialog.department')}
                     </label>
                     <select
                       id="department"
                       name="department"
                       className="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       {...register('department', {
-                        required: 'Department is required',
+                        required: t('careerDialog.requiredField', {
+                          field: t('careerDialog.department'),
+                        }),
                       })}
                     >
                       <option value="" disabled>
-                        Select your department
+                        {t('careerDialog.selectDepartment')}
                       </option>
                       {departments.map((department) => (
                         <option key={department} value={department}>
@@ -233,7 +245,7 @@ const CareerDialog = () => {
                       isLoading={isLoading}
                       disabled={!isValid || isLoading}
                     >
-                      Submit Application
+                      {t('careerDialog.submitApplication')}
                     </Button>
                   </div>
                 </form>

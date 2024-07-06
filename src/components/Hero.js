@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './Button'
@@ -5,6 +6,7 @@ import { Container } from './Container'
 import { LinkedInIcon, InstagramIcon, WhatsAppIcon } from './SocialIcons'
 import heroPortrait from '@/images/hero-0.png'
 import heroBG from '@/images/home-hero-gradient.svg'
+import { useTranslation } from 'next-export-i18n'
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
@@ -18,6 +20,7 @@ function SocialLink({ icon: Icon, ...props }) {
 }
 
 export function Hero() {
+  const { t } = useTranslation()
   return (
     <section className="relative overflow-hidden py-20 lg:py-24">
       {/* Light blue gradient background */}
@@ -41,18 +44,15 @@ export function Hero() {
               >
                 <path d="M247.564 18.5807C241.772 13.3568 232.473 12.7526 225.225 11.4427C217.124 9.97395 208.996 8.57031 200.846 7.46093C186.542 5.51302 172.169 4.08854 157.79 3.01562C126.033 0.645827 94.0929 0.0338481 62.3387 2.36979C42.1785 3.85416 22.008 5.90885 2.32917 10.8463C-0.0155171 11.4349 0.207047 14.6719 2.6889 14.7083C22.0261 14.9896 41.3866 12.6406 60.7109 11.8568C79.9471 11.0807 99.2274 10.6719 118.484 10.9557C142.604 11.3125 166.719 12.8333 190.722 15.5156C199.956 16.5469 209.195 17.6016 218.411 18.8255C227.864 20.0807 237.259 22 246.767 20.7422C247.709 20.6198 248.426 19.3568 247.564 18.5807Z" />
               </svg>
-              <span className="relative">Helping</span>
             </span>{' '}
-            Businesses to Improvement
+            {t('homePage.hero.heading')}
           </h1>
           <p className="mt-6 text-center text-lg leading-8 text-slate-700 lg:text-left">
-            Contra is a one-place human resources business solution. We are
-            passionate about enhancing the way businesses approach human
-            resources in a world of competing people management trends.
+            {t('homePage.hero.description')}
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:justify-start">
             <Button href="/contact" className="h-11">
-              Book a call with us
+              {t('homePage.hero.bookCallButton')}
             </Button>
 
             <div className="flex gap-3 sm:gap-4">
@@ -88,13 +88,15 @@ export function Hero() {
             />
             <div>
               <div className="absolute -top-6 left-1/2 inline-flex h-12 w-max -translate-x-1/2 items-center justify-center gap-3.5 rounded-2xl bg-secondary px-8  text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 md:translate-x-0 lg:-top-6 lg:left-44  2xl:-left-20 2xl:top-14">
-                7 years of TA experience
+                {t('homePage.hero.experienceBadge')}
               </div>
               <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-primary  px-8 text-sm font-semibold text-white shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24  xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
-                250 success stories
+                {t('homePage.hero.successStoriesBadge')}
               </div>
               <div className="absolute top-[350px] hidden h-12 w-max items-center justify-center gap-3.5 rounded-2xl bg-accent px-8 text-sm font-semibold text-white shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-full md:inline-flex md:-translate-x-32 lg:left-48 lg:hidden  2xl:left-full 2xl:inline-flex 2xl:-translate-x-28">
-                <span className="">Tailored Solutions</span>
+                <span className="">
+                  {t('homePage.hero.tailoredSolutionsBadge')}
+                </span>
               </div>
             </div>
           </div>
