@@ -461,8 +461,8 @@ export function Experience() {
                   <a
                     className=" relative top-1/2 inline-flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-slate-900 duration-200 hover:bg-slate-800 ltr:left-1/2 ltr:-translate-x-1/2 rtl:right-1/2 rtl:translate-x-1/2 lg:h-20 lg:w-20"
                     aria-label="Download Profile"
-                    href="/files/company-profile.pdf"
-                    download="Company Profile - Contra"
+                    href="/files/Company Profile - Contra Consulting.pdf"
+                    download="Company Profile - Contra Consulting"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
