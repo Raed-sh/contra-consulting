@@ -8,6 +8,7 @@
     "nationality": "Nationality",
     "selectNationality": "Select your nationality",
     "department": "Department",
+    "coverLetter": "Cover Letter",
     "selectDepartment": "Select your department",
     "submitApplication": "Submit Application",
     "requiredField": "{{field}} is required",

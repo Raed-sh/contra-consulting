@@ -8,6 +8,7 @@
     "nationality": "الجنسية",
     "selectNationality": "اختر جنسيتك",
     "department": "القسم",
+    "coverLetter": "خطاب تقديم",
     "selectDepartment": "اختر القسم",
     "submitApplication": "إرسال التقديم",
     "requiredField": "{{field}} مطلوب",

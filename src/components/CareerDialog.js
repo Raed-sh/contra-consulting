@@ -10,12 +10,15 @@ import { toast } from 'react-toastify'
 
 import { useTranslation } from 'next-export-i18n'
 
+import useDirection from '@/hooks/useDirection'
+
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_CAREER_TEMPLATE_ID
 
 const CareerDialog = () => {
   const { t } = useTranslation()
+  const dir = useDirection()
   const departments = t('departments', { returnObjects: true })
   const countries = t('countries', { returnObjects: true })
 
@@ -33,6 +36,7 @@ const CareerDialog = () => {
       phone: '',
       nationality: '',
       department: '',
+      coverLetter: '',
       resume: null,
     },
   })
@@ -50,6 +54,7 @@ const CareerDialog = () => {
       phone: data.phone,
       nationality: data.nationality,
       department: data.department,
+      coverLetter: data.coverLetter,
       // resume: data.file,
     }
     emailjs
@@ -80,6 +85,7 @@ const CareerDialog = () => {
           open={isOpen}
           onClose={() => setIsOpen(false)}
           className="relative z-50"
+          dir={dir}
         >
           <div className="fixed inset-0 bg-black bg-opacity-30"></div>
           <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
@@ -216,6 +222,31 @@ const CareerDialog = () => {
                     {errors.department && (
                       <p className="text-sm text-red-500">
                         {errors.department.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="mb-4">
+                    <label
+                      htmlFor="coverLetter"
+                      className="block font-medium text-accent"
+                    >
+                      {t('careerDialog.coverLetter')}
+                    </label>
+                    <textarea
+                      type="text"
+                      id="coverLetter"
+                      name="coverLetter"
+                      className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      {...register('coverLetter', {
+                        required: t('careerDialog.requiredField', {
+                          field: t('careerDialog.coverLetter'),
+                        }),
+                      })}
+                    />
+                    {errors.name && (
+                      <p className="text-sm text-red-500">
+                        {errors.coverLetter.message}
                       </p>
                     )}
                   </div>
