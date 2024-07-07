@@ -3,8 +3,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import countries from '../constants/countries'
-import departments from '../constants/departments'
 import { Button } from './Button'
 import { MdOutlineSupervisorAccount } from 'react-icons/md'
 import emailjs from '@emailjs/browser'
@@ -18,6 +16,8 @@ const TEMPLATE_ID = process.env.NEXT_PUBLIC_CAREER_TEMPLATE_ID
 
 const CareerDialog = () => {
   const { t } = useTranslation()
+  const departments = t('departments', { returnObjects: true })
+  const countries = t('countries', { returnObjects: true })
 
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
