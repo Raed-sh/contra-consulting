@@ -15,6 +15,7 @@ import {
   EmailIcon,
 } from './SocialIcons'
 import { useTranslation } from 'next-export-i18n'
+import useDirection from '../hooks/useDirection'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -57,14 +58,15 @@ function SocialLink({ icon: Icon, label, ...props }) {
 
 export function Footer({ newsletter = true }) {
   const { t } = useTranslation()
+  const dir = useDirection()
 
   return (
-    <section className={clsx(newsletter && 'pt-12 sm:pt-16')}>
+    <section className={clsx(newsletter && 'pt-12 sm:pt-16')} dir={dir}>
       <footer className="overflow-hidden bg-slate-900 pb-8 pt-20 sm:pb-12 sm:pt-24 lg:pt-32">
         <Container>
           <div className="mx-auto grid max-w-xl items-center gap-5 lg:mx-0 lg:max-w-none lg:grid-cols-12 lg:gap-12 xl:gap-20">
             <div className="lg:col-span-7">
-              <h3 className="text-center font-display text-4xl font-semibold text-white sm:text-5xl lg:max-w-xl lg:text-left">
+              <h3 className="text-center font-display text-4xl font-semibold text-white sm:text-5xl lg:max-w-xl ltr:lg:text-left rtl:lg:text-right">
                 {t('footer.heading')}
               </h3>
               <div className="hidden lg:block">
@@ -95,7 +97,7 @@ export function Footer({ newsletter = true }) {
                 .map((text, idx) => (
                   <p
                     key={`${idx * 2}-text`}
-                    className="text-center text-lg text-slate-50 lg:max-w-md lg:text-left"
+                    className="text-center text-lg text-slate-50 lg:max-w-md ltr:lg:text-left rtl:lg:text-right"
                   >
                     {text}
                   </p>
@@ -146,7 +148,7 @@ export function Footer({ newsletter = true }) {
                 </Link>
               ))}
             </div> */}
-            <p className="mt-8 text-base text-secondary md:mt-0">
+            <p className="mt-8 text-base text-secondary md:mt-0" dir="ltr">
               © {new Date().getFullYear()} {t('footer.copyRight')}
             </p>
           </div>

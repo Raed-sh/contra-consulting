@@ -8,9 +8,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import workBG from '@/images/featured-work-item-bg.svg'
 import { useTranslation } from 'next-export-i18n'
+import useDirection from '../../hooks/useDirection'
 function ServiceCard({ service }) {
-  const { t } = useTranslation()
   const { title, description, tags, url, thumbnail } = service
+
+  const { t } = useTranslation()
+  const dir = useDirection()
+
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,6 +30,7 @@ function ServiceCard({ service }) {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
+      dir={dir}
     >
       <section className="relative grid items-center gap-8 overflow-hidden rounded-2xl bg-slate-50 px-4 pb-14 pt-5 shadow-sm shadow-sky-100/50 ring-1 ring-slate-100 sm:gap-12 sm:px-8 sm:pt-8 lg:grid-cols-12 lg:px-0 lg:py-0 xl:gap-16 xl:pt-16">
         <Image

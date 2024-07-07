@@ -94,11 +94,13 @@ function ContactForm() {
           type="email"
           autoComplete="email"
           placeholder="foobar@email.com"
+          dir={'ltr'}
           {...register('email')}
         />
         <TextField
           label={t('contactPage.form.phoneLabel')}
           name="phone"
+          dir={'ltr'}
           type="tel"
           autoComplete="tel"
           aria-describedby="phone-description"
@@ -212,7 +214,7 @@ const CheckboxField = forwardRef(({ label, name, error, ...props }, ref) => {
           {...props}
         />
       </div>
-      <div className="ml-3 text-sm leading-6">
+      <div className="text-sm leading-6 ltr:ml-3 rtl:mr-3">
         <label htmlFor={name} className="text-slate-700">
           {label}
         </label>

@@ -7,6 +7,7 @@ import { LinkedInIcon, InstagramIcon, WhatsAppIcon } from './SocialIcons'
 import heroPortrait from '@/images/hero-0.png'
 import heroBG from '@/images/home-hero-gradient.svg'
 import { useTranslation } from 'next-export-i18n'
+import useDirection from '../hooks/useDirection'
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
@@ -21,18 +22,20 @@ function SocialLink({ icon: Icon, ...props }) {
 
 export function Hero() {
   const { t } = useTranslation()
+  const dir = useDirection()
+
   return (
-    <section className="relative overflow-hidden py-20 lg:py-24">
+    <section className="relative overflow-hidden py-20 lg:py-24" dir={dir}>
       {/* Light blue gradient background */}
       <Image
         src={heroBG}
         alt=""
-        className="absolute inset-x-0 top-56 w-auto lg:inset-y-0"
+        className="absolute inset-x-0 top-56 w-auto rtl:hidden lg:inset-y-0"
       />
 
-      <Container className="relative z-10 grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
+      <Container className="relative z-10 grid items-center gap-16  lg:grid-cols-2 lg:gap-8">
         <div className="mx-auto flex max-w-2xl flex-col items-center lg:items-start">
-          <h1 className="text-center font-display text-5xl font-semibold  text-[#00215E] sm:text-6xl lg:text-left">
+          <h1 className="text-center font-display text-5xl font-semibold  text-[#00215E] sm:text-6xl ltr:lg:text-left rtl:lg:text-right">
             <span className="relative whitespace-nowrap">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +50,7 @@ export function Hero() {
             </span>{' '}
             {t('homePage.hero.heading')}
           </h1>
-          <p className="mt-6 text-center text-lg leading-8 text-slate-700 lg:text-left">
+          <p className="mt-6 text-center text-lg leading-8 text-slate-700 ltr:lg:text-left rtl:lg:text-right">
             {t('homePage.hero.description')}
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:justify-start">
@@ -76,7 +79,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div className="mx-auto w-full max-w-lg lg:mr-0">
+        <div className="mx-auto w-full max-w-lg rtl:ml-0 rtl:mr-auto lg:mr-0">
           <div className="aspect-h-5 aspect-w-4 relative rounded-2xl bg-slate-50">
             <Image
               className="h-full w-full rounded-2xl object-cover object-center"
@@ -87,7 +90,7 @@ export function Hero() {
               priority
             />
             <div>
-              <div className="absolute -top-6 left-1/2 inline-flex h-12 w-max -translate-x-1/2 items-center justify-center gap-3.5 rounded-2xl bg-secondary px-8  text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 md:translate-x-0 lg:-top-6 lg:left-44  2xl:-left-20 2xl:top-14">
+              <div className=" absolute -top-6 left-1/2 inline-flex h-12 w-max -translate-x-1/2 items-center justify-center gap-3.5 rounded-2xl bg-secondary px-8  text-sm font-semibold text-slate-700 shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:-left-28 md:top-14 md:translate-x-0 lg:-top-6 lg:left-44  2xl:-left-20 2xl:top-14">
                 {t('homePage.hero.experienceBadge')}
               </div>
               <div className="absolute left-12 top-full inline-flex h-12 w-max -translate-y-6 items-center justify-center gap-3.5 rounded-2xl bg-primary  px-8 text-sm font-semibold text-white shadow-lg shadow-sky-100/50 ring-1 ring-slate-900/5 backdrop-blur-md md:left-0 md:-translate-x-20 md:-translate-y-24 lg:-left-3 lg:-translate-y-24  xl:-left-6 xl:-translate-x-28 xl:-translate-y-32">
